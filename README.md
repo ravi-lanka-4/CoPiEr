@@ -10,15 +10,13 @@ Install scip-4.0.1-affected (in dep/ subfolder):
 
 Install:
  - Install https://github.com/Reference-LAPACK/lapack
- - Be cautious:
-  -- It has several dependencies.
-  -- Make sure you use the same compiler (gcc/g++-4.9) for the all the dependency packages.
+ - Be cautious: It has several dependencies. Make sure you use the same compiler (gcc/g++-4.9) for the all the dependency packages.
 
 Next install scip-dagger:
  - Install co-training/scip-dagger
-  -- Edit path to scip-4.0.1-affected in the makefile.
-  -- make OPT=opt ZIMPL=false LPS=grb [Use the same command as in step 2]. 
-  -- Library and application should be compiled/built with the same command.
+ - Edit path to scip-4.0.1-affected in the makefile.
+ - make OPT=opt ZIMPL=false LPS=grb [Use the same command as in step 2]. 
+ - Library and application should be compiled/built with the same command.
 
 
 Now define there macros in your ~/.bashrc:
