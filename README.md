@@ -22,3 +22,7 @@ Define these macros in your ~/.bashrc (and remember to restart your terminal) :
   - export COTRAIN_SCATCH=\<path to scratch folder\>
   - (optional) export PYTHONDONTWRITEBYTECODE=1 
 
+For training:
+  - cd $COTRAIN_HOME
+  - Arguments for run-mvc: <data_folder> <exp_id> <#nodes on branch and bound> <#iterations for spatial policy>
+  - sh joint-pyscripts/run-mvc.sh mvc_test mvc_exp 100 1000
