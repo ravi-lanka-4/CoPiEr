@@ -1,0 +1,71 @@
+Example Files for the VBCTOOL - the Tree Interface Version 1.0
+
+The files included in the example package are constructed in order
+to demonstrate the abilities of the Tree Interface. Some of them
+show the same tree, only they have different adaptions for the Tree 
+Interface. The example files are listed and explained below.
+
+gr_*    :   Simple trees with no information at every node. The number
+	    in each filename depicts the numbers of nodes in the tree. 
+	    Load a file and the tree will be drawn.
+	    Load a tree with a large number of nodes. Choose "Area Zoom"
+	    in the menue "View". Position the mouse cursor above the draw area.
+	    Press the left mouse button and keep it pressed while opening the 
+	    zoom rectangle. Release the button when the area is chosen.
+	    Press the middle mouse button and keep it pressed while 
+	    moving the cursor slowly over the draw area. This "drags" the
+	    drawing.  
+
+th_*    :   Simple trees with no information at every node. The files
+	    are the input of the small demonstration of an Users Algorithm
+	    that is adapted to the Tree Interface in our executable. 
+	    Load a file and then click on the button "User Algorithm"
+	    in the menue  "Algorithms". If the tree gets to small, click on 
+	    the button "Scaler..." in the menue "Applications". Resize
+	    the tree with the help of the "Scaler..." WHILE the algorithm is 
+	    still running. All other applications can be handled as well 
+	    as the "Scaler". 
+	    
+Infgr_* :   Trees including informations at every node.
+	    Load a file and the tree will be drawn. Position the mouse cursor 
+            above a node and click the right button: a node information window
+	    will appear.
+	    Try the bowser mode: Click on the button "Browser Mode" in the 
+	    menue "Applications". Position the mouse cursor above the draw 
+	    area, press the left mouse button and keep it pressed while 
+	    moving it across the tree. Keep an eye on the left diplay area.
+	    It shows the "important" information.
+
+C_*     :   The same trees as stored in Infgr_*, with different colours
+	    added for every node. Change colour or shape of the nodes 
+	    with the menue "Nodes...". If a colour is not listed check 
+	    paragraph 2.4.3.11 in the User Manual, how to list this colour.
+
+Emul_*  :   Tree to demonstrate the use of the Emulation tool. 
+	    "Start" the emulation. "Interrupt" it. Call the "Setup.." menue in
+	    the menue "Emulation". Enter a time that the remaining emulation
+	    should need. This time may be much longer or much shorter than 
+	    the remaining time. "Continue" the Emulation.
+	    After the emulation has stopped, call the "Setup..." menue again.
+	    Choose single step or show complete tree. (Both are available
+	    as well DURING the emulation process. Just interrupt the process 
+	    and then continue it after making your choices in the setup.)
+	    If "Single Step" was choosen, "Start Emulation" (or "Continue" it).
+	    Then step through the emulation by hitting the space bar.
+	    In case nothing happens, place the mouse cursor in the draw area
+	    and click once the left mouse button.
+
+pipe_*  :   Example output of ABACUS, that is piped into the Tree Interface.
+	    By kind permission of Stefan Thienel.
+	    Use the following syntax:
+	             cat pipe_39 | vbctool	
+	    Then click the button "Standard In" in the menue "Online".
+	    Use all features of the Tree Interface while the output is 
+	    still piped to the Tree Interface.
+
+
+
+  
+Last changed on August, 5th, 1996.
+Sebastian Leipert, leipert@informatik.uni-koeln.de
+ 

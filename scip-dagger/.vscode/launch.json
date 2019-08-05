@@ -1,0 +1,136 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "scip-dagger",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/bin/scipdagger",
+            "stopAtEntry": false,
+            //"args": ["--trace", "trace.tmp", "-r", "1", "-s", "scip.set", "-f", "data/psulu/train/input105.lp","-o","solution/data/psulu/train/input105.sol","--nodesel","oracle","--nodeseltrj","/tmp//sample/input105.search.trj.0","--nodepru","oracle","--nodeprutrj","/tmp//sample/input105.kill.trj.0"],
+                     //"--trace", "/tmp/sample/trace",
+
+            // "args": ["-r", "1", 
+            //          "-s", "scip.set", 
+            //          "-g", "0.03",
+            //          "-j", "0.03",
+            //          "-k", "0.05",
+            //          "-f", "data/psulu/ts_10/train/input1.lp", 
+            //          "-o", "/tmp/policysol/data/psulu/ts_11/train/c2w8/input10.sol",
+            //          "--nodesel", "dagger", "/Users/subrahma/Desktop/searchPolicy.0.h5", 
+            //          "--nodepru", "dagger", "/Users/subrahma/Desktop/killPolicy.0.h5", 
+            //          "--nodeseltrj", "/tmp//sample/search.trj.0", 
+            //          "--nodeprutrj", "/tmp//sample/kill.trj.0", 
+            //          "--probfeats", "feats/psulu/train/feats10.txt",
+            //          "--vbc", "/tmp/sample/vbc.txt"],
+
+            //          //"--allsols_prefix", "/tmp/sample/trace",
+            // "args": ["-r", "1", 
+            //          "-s", "scip.set", 
+            //          "-f", "data/psulu/ts_11/train/input10.lp", 
+            //          "--pnorm", "/Users/subrahma/proj/pdf/scip-dagger/pyscripts/sample-data/kill.norm.param.dat",
+            //          "--snorm", "/Users/subrahma/proj/pdf/scip-dagger/pyscripts/sample-data/search.norm.param.dat",
+            //          "--nodesel", "policy", "/Users/subrahma/Desktop/searchPolicy.0.h5", 
+            //          "--nodepru", "policy", "/Users/subrahma/Desktop/killPolicy.0.h5"],
+
+            // "args": ["-r", "1", 
+            //          "-s", "scip.set", 
+            //          "-f", "data/psulu/ts_14/train/input1.lp", 
+            //          "-o", "/tmp/policysol/data/psulu/ts_11/train/c2w8/input10.sol",
+            //          "--nodesel", "dagger", "/Users/subrahma/Desktop/searchPolicy.0", 
+            //          "--nodepru", "dagger", "/Users/subrahma/Desktop/killPolicy.0", 
+            //          "--nodeseltrj", "/tmp//sample/search.trj.0", 
+            //          "--nodeprutrj", "/tmp//sample/kill.trj.0", 
+            //          "--vbc", "/tmp/sample/vbc.txt"],
+
+            // "args": ["-r", "1", 
+            //          "-s", "scip.set", 
+            //          "-g", "0.03",
+            //          "-f", "data/psulu/ts_11/train/input10.lp", 
+            //          "--nodesel", "policy", "policy/data/psulu/ts_10/train/c2w8/searchPolicy.0", 
+            //          "--nodepru", "policy", "policy/data/psulu/ts_10/train/c2w8/killPolicy.0", 
+            //          "--allsols_write", "/tmp/sample/trace",
+            //          "--sol", "/tmp/policysol/data/psulu/ts_11/train/c2w8/input10.sol",
+            //          "--vbc", "/tmp/sample/vbc.txt"],
+            //          "-o", "solution/data/psulu/ts_10/train/input1.sol",
+
+            // "args": ["-r", "1", "-s", "scip.set", "-f", "./data/psulu/ts_10/train/input0.lp", 
+            //     "-o", "solution/./data/psulu/ts_10/train/input0.sol", 
+            //     "--nodesel", "oracle", "--nodeseltrj", 
+            //     "/tmp/subrahma/tmp//./data/psulu/ts_10/nn_psulu/train/input0.search.trj.0", 
+            //     "--nodepru", "oracle", "--nodeprutrj", 
+            //     "/tmp/subrahma/tmp//./data/psulu/ts_10/nn_psulu/train/input0.kill.trj.0"],
+                     //"-o", "solution/./data/psulu/ts_11/train/input2.sol",
+
+            // "args": ["-s","scip.set", 
+            //          "-f","./data/psulu/ts_10/train/input1.lp",
+            //          "--nodesel","policy","policy/./data/psulu/ts_10/train/nn_psulu/searchPolicy.0.h5",
+            //          "--snorm","policy/data/psulu/ts_10/train/nn_psulu/searchPolicy.0.norm.dat",
+            //          "--nodepru","policy","policy/./data/psulu/ts_10/train/nn_psulu/killPolicy.0.h5",
+            //          "--pnorm","policy/data/psulu/ts_10/train/nn_psulu/killPolicy.0.norm.dat"]
+
+            //"args" :["-r", "1", "-s", "scip.set", 
+            //       "-f", "./data/psulu/ts_10/train/input5.lp", 
+            //        "--probfeats", "feats/psulu//train/feats5.txt", 
+            //        "--nodesel", "policy", "policy/./data/psulu/ts_10/train/nn_psulu/searchPolicy.0.h5", 
+            //        "--pnorm", "policy/./data/psulu/ts_10/train/nn_psulu/killPolicy.0.norm.dat", 
+            //        "--nodepru", "policy", "policy/./data/psulu/ts_10/train/nn_psulu/killPolicy.0.h5", "-j", "0", "-k", "0", 
+            //        "--snorm", "policy/./data/psulu/ts_10/train/nn_psulu/searchPolicy.0.norm.dat"],
+            //"--useSols", 
+
+            // "args" :["-r", "1", "-s", "scip.set", 
+            //          "-f", "/Users/subrahma/proj/pdf/co-training/data//psulu_mini//lpfiles/unlabeled/input797.lp",
+            //          "--nodesel", "policy" ,"./policy//Users/subrahma/proj/pdf/co-training/data//psulu_mini//lpfiles/train/nn_psulu_cotrain//searchPolicy.0.h5",
+            //          "--sol", "/Users/subrahma/proj/pdf/co-training/scratch///Users/subrahma/proj/pdf/co-training/data//psulu_mini//lpfiles/unlabeled/nn_psulu_cotrain/input797.lp",
+            //          "--nodepru", "policy", "./policy//Users/subrahma/proj/pdf/co-training/data//psulu_mini//lpfiles/train/nn_psulu_cotrain//killPolicy.0.h5"]
+        
+            //  "args" :["-r", "1", "-s", "scip.set", 
+            //           "-f", "/Users/subrahma/proj/pdf/co-training/data//psulu_mini//lpfiles/test/input1000.lp",
+            //           "-o", "/Users/subrahma/proj/pdf/co-training/data//psulu_mini//sol/test/input1000.sol",
+            //           "--snorm","./policy//Users/subrahma/proj/pdf/co-training/data//psulu_mini//lpfiles/train/nn_psulu_cotrain/searchPolicy.0.norm.dat",
+            //           "--nodesel", "dagger" ,"./policy//Users/subrahma/proj/pdf/co-training/data//psulu_mini//lpfiles/train/nn_psulu_cotrain//searchPolicy.0.h5",
+            //           "--sol", "/Users/subrahma/proj/pdf/co-training/scratch///Users/subrahma/proj/pdf/co-training/data//psulu_mini//lpfiles/labeled/nn_psulu_cotrain/input1.sol",
+            //           "--pnorm","./policy//Users/subrahma/proj/pdf/co-training/data//psulu_mini//lpfiles/train/nn_psulu_cotrain/prunePolicy.0.norm.dat",
+            //           "--nodepru", "dagger", "./policy//Users/subrahma/proj/pdf/co-training/data//psulu_mini//lpfiles/train/nn_psulu_cotrain//killPolicy.0.h5"]
+                      //"--snorm", "/Users/subrahma/proj/maverick-setup/co-training/scip-dagger/policy/Users/subrahma/proj/maverick-setup/co-training/data/psulu_small_a/mps/train/nn_psulu_0.25_cotrain_search_mps_1/searchPolicy.0.norm.dat",
+                      //"--nodesel", "dagger", "/Users/subrahma/proj/maverick-setup/co-training/scip-dagger/policy/Users/subrahma/proj/maverick-setup/co-training/data/psulu_small_a/mps/train/nn_psulu_0.25_cotrain_search_mps_1/searchPolicy.0_keras.json",
+
+            // "args": ["-r", "1", "-s", "scip.set", "-n", "100",
+            //           "-f", "/Users/subrahma/proj/maverick-setup/co-training//data//psulu_small_a//mps/unlabeled/input104.mps", 
+            //           "--probfeats", "/Users/subrahma/proj/maverick-setup/co-training//data//psulu_small_a//feats/unlabeled/feats104.csv",
+            //           "-o", "/Users/subrahma/proj/maverick-setup/co-training/scratch/Users/subrahma/proj/maverick-setup/co-training/data/psulu_small_a/sol/train/nn_psulu_0.25_cotrain_search_mps/input104.sol",
+            //           "--nodesel", "oracle", "--nodeseltrj", "/tmp/input104.search.trj"]
+
+            // //"args": ["-n", "250", "-r", "1", "-s", "scip.set", "-f", "/Users/subrahma/proj/maverick-setup/co-training//data//psulu_test//mps/unlabeled/input40.mps", "--nodesel", "policy", "./policy//Users/subrahma/proj/maverick-setup/co-training//data//psulu_test//mps/train/nn_psulu_0.25_cotrain_search_mps_1//searchPolicy.0_keras.json", "--sol", "/Users/subrahma/proj/maverick-setup/co-training//scratch///Users/subrahma/proj/maverick-setup/co-training//data//psulu_test//mps/unlabeled/nn_psulu_0.25_cotrain_search_mps_1/input40.sol", "--snorm", "./policy//Users/subrahma/proj/maverick-setup/co-training//data//psulu_test//mps/train/nn_psulu_0.25_cotrain_search_mps_1//searchPolicy.0.norm.dat", "--probfeats", "/Users/subrahma/proj/maverick-setup/co-training//data//psulu_test//feats/unlabeled//feats40.txt"] 
+                     //"--snorm", "./policy//Users/subrahma/proj/maverick-setup/co-training//data//psulu_small_a//mps/train/nn_psulu_0.25_cotrain_search_mps_1//searchPolicy.0.norm.dat", 
+
+            // "args": ["-n", "1000", "-r", "1", "-s", "scip.set",
+            //          "-f", "/Users/subrahma/proj/maverick-setup/co-training/data/mvc_250_50/lpfiles/labeled/input200.lp", 
+            //          "-o", "/Users/subrahma/proj/maverick-setup/co-training/data/mvc_250_50/sol/labeled/input200.sol", 
+            //          "--nodesel", "oracle", "--nodeseltrj", "/tmp/input200.trj"]
+
+                     //"--nodesel", "policy", "/Users/subrahma/proj/maverick-setup/co-training/scip-dagger/pyscripts/searchPolicy.1.json", 
+                     //"--probfeats", "/Users/subrahma/proj/maverick-setup/co-training/data/mvc_250_50/feats/labeled/input200.csv",
+                     
+
+            "args": ["-r", "1", "-s", "scip.set",  "-n", "1000",
+                     "-f", "/Users/subrahma/proj/maverick-setup/co-training/data/mvc_250_50/lpfiles/labeled/input200.lp", 
+                     "-o", "/Users/subrahma/proj/maverick-setup/co-training/data/mvc_250_50/sol/labeled/input200.sol", 
+                     "--nodesel", "dagger", "/Users/subrahma/proj/maverick-setup/co-training/scip-dagger/pyscripts/searchPolicy.json"] 
+
+            // "args": ["-r", "1", "-s", "scip.set",  "-n", "1000",
+            //          "-f", "/Users/subrahma/proj/maverick-setup/co-training//data//psulu_small_a//mps/unlabeled/input102.mps", 
+            //          "--probfeats", "/Users/subrahma/proj/maverick-setup/co-training//data//psulu_small_a//feats/unlabeled//feats102.csv",
+            //           "--snorm","./policy//Users/subrahma/proj/maverick-setup/co-training//data//psulu_small_a//mps/train/nn_psulu_0.25_cotrain_search_mps_1//searchPolicy.0.norm.dat",
+            //           "-o", "/Users/subrahma/proj/maverick-setup/co-training/scratch/Users/subrahma/proj/maverick-setup/co-training/data/psulu_small_a/sol/train/nn_psulu_0.25_cotrain_search_mps/input102.sol",
+            //           "--nodesel", "policy", "policy//Users/subrahma/proj/maverick-setup/co-training//data//psulu_small_a//mps/train/nn_psulu_0.25_cotrain_search_mps_1/searchPolicy.0_keras.json"] 
+
+            "cwd": "${workspaceRoot}",
+            "environment": [],
+            "env": {"GRB_LICENSE_FILE": "/Users/subrahma/proj/grblic/gurobi.lic"},
+            "externalConsole": false,
+            "MIMode": "lldb"
+        }
+    ]
+}

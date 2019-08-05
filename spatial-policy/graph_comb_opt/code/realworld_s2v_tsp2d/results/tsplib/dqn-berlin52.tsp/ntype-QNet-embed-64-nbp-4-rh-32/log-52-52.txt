@@ -1,0 +1,24 @@
+decay = 0.1
+knn = 10
+edge_embed_dim = 64
+net_type = QNet
+mem_size = 50000
+num_env = 1
+n_step = 1
+min_n = 52
+max_n = 52
+max_iter = 200000
+dev_id = 0
+max_bp_iter = 4
+batch_size = 128
+embed_dim = 64
+learning_rate = 0.0001
+w_scale = 0.01
+l2_penalty = 0
+momentum = 0.9
+Traceback (most recent call last):
+  File "main.py", line 55, in <module>
+    PrepareGraphs(fname, isTest=True)
+  File "main.py", line 17, in PrepareGraphs
+    with open(fname, 'r') as f_tsp:
+IOError: [Errno 2] No such file or directory: '../../data/tsplib/berlin52.tsp'

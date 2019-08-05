@@ -1,0 +1,24 @@
+environment: '[/Users/subrahma/proj/pdf/co-training/data/psulu_small_a/env/labeled/envi0.yaml]'
+chance_constraint: 0.005
+margin: 0.2
+horizon_cost_proportion: 0.99
+coVarX: 0.0001
+coVarY: 0.0001
+cleanMap: False
+quad: True
+budget: 3
+waypoints: 15
+cleanDist: 0.1
+receding_horizon: False
+start_location: 
+- 0
+- 0
+- 0
+- 0
+outFolder: '[./output/]'
+horizon_polygon_size: 50
+end_location: 
+- 1
+- 1
+- 0
+- 0

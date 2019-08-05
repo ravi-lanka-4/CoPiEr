@@ -1,0 +1,30 @@
+109,110c109,110
+<              setX(p->x());
+<              setY(p->y());
+---
+>              this->setX(p->x());
+>              this->setY(p->y());
+116,117c116,117
+<              setX(x);
+<              setY(y);
+---
+>              this->setX(x);
+>              this->setY(y);
+159,160c159,160
+<          setX(x);
+<          setY(y);
+---
+>          this->setX(x);
+>          this->setY(y);
+166,167c166,167
+<          setX(this->y());
+<          setY(-this->x());
+---
+>          this->setX(this->y());
+>          this->setY(-this->x());
+172,173c172,173
+<          setX(-this->y());
+<          setY(this->x());
+---
+>          this->setX(-this->y());
+>          this->setY(this->x());

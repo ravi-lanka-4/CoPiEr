@@ -1,0 +1,16 @@
+TimesMedium:		-adobe-times-medium-r-normal--
+CourierMedium:		-adobe-courier-medium-r-normal--
+HelveticaMedium:	-adobe-helvetica-medium-r-normal--
+
+TimesBold:		-adobe-times-bold-r-normal--
+CourierBold:		-adobe-courier-bold-r-normal--
+HelveticaBold:		-adobe-helvetica-bold-r-normal--
+
+TimesMedium.ps:		Times-Roman
+CourierMedium.ps:	Courier
+HelveticaMedium.ps:	Helvetica
+
+TimesBold.ps:		Times-Bold
+CourierBold.ps:		Courier-Bold
+HelveticaBold.ps:	Helvetica-Bold
+

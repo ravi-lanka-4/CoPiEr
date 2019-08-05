@@ -1,0 +1,61 @@
+#TYPE: COMPLETE TREE
+#TIME: SET
+#BOUNDS: SET
+#INFORMATION: STANDARD
+#NODE_NUMBER: NONE
+00:00:00.00 N 0 1 5
+00:00:00.00 U 200.1
+00:00:00.00 L 0
+00:00:00.01 I 1 \inode 1\iinformation included by node 1\nInfo 1:\t\t 12345\nInfo 2:\t\t 1234567890\nInfo 3:\t\t stringinformation\nInformation 4:\t TRUE\nInformation 5:\t containing a different Information\n\t\t with some additional lines
+00:00:00.50 N 1 2 5
+00:00:00.50 I 2 \inode 2\iinformation included by node 2\nInfo 1:\t\t 12345\nInfo 2:\t\t 1234567890\nInfo 3:\t\t stringinformation\nInformation 4:\t TRUE\nInformation 5:\t containing a respectively very large Innformation
+00:00:02.00 N 1 3 5
+00:00:02.00 I 3 \inode 3\iinformation included by node 3\nInfo 1:\t\t 12345\nInfo 2:\t\t 1234567890\nInfo 3:\t\t stringinformation\nInformation 4:\t TRUE\nInformation 5:\t containing a respectively very large Innformation
+00:00:03.00 N 1 4 5
+00:00:03.00 I 4 \inode 4\iinformation included by node 4\nInfo 1:\t\t 12345\nInfo 2:\t\t 1234567890\nInfo 3:\t\t stringinformation\nInformation 4:\t TRUE\nInformation 5:\t containing a respectively very large Innformation
+00:00:06.00 P 1 15
+00:00:06.00 U 178.52
+00:00:08.01 I 1 \inODE 1\iinformation included by node 1\nNEW INFORMATION\nVERY \tshort
+00:00:09.00 N 2 5 6
+00:00:09.00 I 5 \inode 5\iinformation included by node 5\nInfo 1:\t\t 12345\nInfo 2:\t\t 1234567890\nInfo 3:\t\t stringinformation\nInformation 4:\t TRUE\nInformation 5:\t containing a respectively very large Innformation
+00:00:09.20 N 2 6 5
+00:00:09.20 L 23.7
+00:00:09.20 I 6 \inode 6\iinformation included by node 6\nInfo 1:\t\t 12345\nInfo 2:\t\t 1234567890\nInfo 3:\t\t stringinformation\nInformation 4:\t TRUE\nInformation 5:\t containing a respectively very large Innformation
+00:00:10.01 I 2 \inODE 2\iinformation included by node 1\nNEW INFORMATION\nVERY \tshort
+00:00:10.20 P 3 14
+00:00:10.21 U 162.789
+00:00:10.22 L 34.7
+00:00:10.41 I 3 \inODE 3\iinformation included by node 1\nNEW INFORMATION\nVERY \tshort
+00:00:10.61 I 4 \inODE 4\iinformation included by node 1\nNEW INFORMATION\nVERY \tshort
+00:00:10.80 N 3 7 5
+00:00:10.80 I 7 \inode 7\iinformation included by node 7\nInfo 1:\t\t 12345\nInfo 2:\t\t 1234567890\nInfo 3:\t\t stringinformation\nInformation 4:\t TRUE\nInformation 5:\t containing a respectively very large Innformation
+00:00:11.00 N 3 8 5
+00:00:11.00 I 8 \inode 8\iinformation included by node 8\nInfo 1:\t\t 12345\nInfo 2:\t\t 1234567890\nInfo 3:\t\t stringinformation\nInformation 4:\t TRUE\nInformation 5:\t containing a respectively very large Innformation
+00:00:11.20 N 6 9 5
+00:00:11.20 I 9 \inode 9\iinformation included by node 9\nInfo 1:\t\t 12345\nInfo 2:\t\t 1234567890\nInfo 3:\t\t stringinformation\nInformation 4:\t TRUE\nInformation 5:\t containing a respectively very large Innformation
+00:00:11.40 N 6 10 5
+00:00:11.40 I 10 \inode 10\iinformation included by node 10\nInfo 1:\t\t 12345\nInfo 2:\t\t 1234567890\nInfo 3:\t\t stringinformation\nInformation 4:\t TRUE\nInformation 5:\t containing a respectively very large Innformation
+00:00:13.00 N 8 11 5
+00:00:14.00 P 4 18
+00:00:14.00 U 123.456
+00:00:14.00 I 11 \inode 11\iinformation included by node 11\nInfo 1:\t\t 12345\nInfo 2:\t\t 1234567890\nInfo 3:\t\t stringinformation\nInformation 4:\t TRUE\nInformation 5:\t containing a respectively very large Innformation
+00:00:14.00 L 89.667
+00:00:15.00 N 8 12 5
+00:00:15.00 I 12 \inode 12\iinformation included by node 12\nInfo 1:\t\t 12345\nInfo 2:\t\t 1234567890\nInfo 3:\t\t stringinformation\nInformation 4:\t TRUE\nInformation 5:\t containing a respectively very large Innformation
+00:00:19.00 N 8 13 5
+00:00:20.00 P 2 12
+00:00:22.00 P 12 9
+00:00:22.50 I 13 \inode 13\iinformation included by node 13\nInfo 1:\t\t 12345\nInfo 2:\t\t 1234567890\nInfo 3:\t\t stringinformation\nInformation 4:\t TRUE\nInformation 5:\t containing a respectively very large Innformation
+00:00:23.01 I 12 \iHELLO! This is node 12\iinformation included by node 1\nNEW INFORMATION\nVERY \tshort
+00:00:25.00 N 8 14 5
+00:00:25.00 I 14 \inode 14\iinformation included by node 14\nInfo 1:\t\t 12345\nInfo 2:\t\t 1234567890\nInfo 3:\t\t stringinformation\nInformation 4:\t TRUE\nInformation 5:\t containing a respectively very large Innformation
+00:00:25.00 U 100.2
+00:00:25.00 L 99.8
+00:00:27.00 N 8 15 5
+00:00:27.00 I 15 \inode 15\iinformation included by node 15\nInfo 1:\t\t 12345\nInfo 2:\t\t 1234567890\nInfo 3:\t\t stringinformation\nInformation 4:\t TRUE\nInformation 5:\t containing a respectively very large Innformation
+00:00:28.00 P 1 1
+00:00:29.50 A 13 \imake it longer\i add more information included by node 13\nInfo 1:\t\t 12345\nInfo 2:\t\t 1234567890\nInfo 3:\t\t stringinformation\nInformation 4:\t TRUE\nInformation 5:\t containing a respectively very large Innformation
+00:00:30.50 A 14 \imake it longer\i add more information included by node 13\nInfo 1:\t\t 12345\nInfo 2:\t\t 1234567890\nInfo 3:\t\t stringinformation\nInformation 4:\t TRUE\nInformation 5:\t containing a respectively very large Innformation
+00:00:31.00 A 15 \imake it longer\i add more information included by node 13\nInfo 1:\t\t 12345\nInfo 2:\t\t 1234567890\nInfo 3:\t\t stringinformation\nInformation 4:\t TRUE\nInformation 5:\t containing a respectively very large Innformation
+00:00:31.00 U 100
+00:00:31.00 L 100.3

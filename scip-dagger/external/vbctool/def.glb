@@ -1,0 +1,71 @@
+/*****************************************************************
+
+            Filename    :  def.glb
+
+	    Version     :  01.1995
+
+	    Author      :  Sebastian Leipert
+
+	    Language    :  C++
+
+            Purpose     :  Global file containing all definitions,
+                           that are used in the TreeInterface and
+                           all included classes.
+  
+******************************************************************/
+
+#ifndef DEF_GLB
+#define DEF_GLB
+
+                                       // Boolean definitons.
+#define TRUE   1
+#define FALSE  0
+
+                                       // Array sizes used for 
+                                       // node informations.
+#define SHORTDIM 16
+#define INFOSIZE 4096  
+#define SHORTSIZE 128
+
+                                       // Temporary array size used for 
+                                       // storing trees of unknown size.
+#define ARRAYSIZE 100
+
+                                       // Number of Dialogwindows.
+#define DIALOGNUM 10
+
+                                       // Number of node categories.
+#define COLOURCOUNT 20
+
+                                       // Default node categories.
+#define STANDARDCOLOUR 1
+#define STANDARDHIGHLIGHT 2
+#define STANDARDSHADE 3
+
+                                       // Default edge categorie.
+#define STANDARDEDGECOLOUR 1
+
+                                       // Maximal separation value.
+#define MAXSEPARATION 32
+
+                                       // Lines of the headers of the
+                                       // files in TreeInterface format.
+#define FIRSTLINE    "#TYPE: COMPLETE TREE"
+#define SECONDLINE_1 "#TIME: SET"
+#define THIRDLINE_1  "#BOUNDS: SET"
+#define FOURTHLINE_1 "#INFORMATION: STANDARD"
+#define FOURTHLINE_2 "#INFORMATION: EXCEPTION"
+#define FIFTHLINE_1  "#NODE_NUMBER: NONE"
+#define FIFTHLINE_2  "#NODE_NUMBER: AVAILABLE"
+#define LASTLINE     "$#END_OF_OUTPUT"
+
+					// Length of the Above defined 
+					// lines.
+#define FIRSTLINECOUNT   20
+#define SECONDLINECOUNT  10
+
+#endif
+
+
+
+

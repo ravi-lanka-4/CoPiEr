@@ -1,0 +1,273 @@
+# verbosity level of output
+# [type: int, range: [0,5], default: 4]
+display/verblevel = 0
+
+#######################
+# display setting
+#######################
+
+# display activation status of display column <lpiterations> (0: off, 1: auto, 2:on)
+# # [type: int, range: [0,2], default: 1]
+display/lpiterations/active = 0
+
+# display activation status of display column <lpavgiterations> (0: off, 1: auto, 2:on)
+# [type: int, range: [0,2], default: 1]
+display/lpavgiterations/active = 0
+
+# display activation status of display column <lpcond> (0: off, 1: auto, 2:on)
+# [type: int, range: [0,2], default: 1]
+display/lpcond/active = 0
+
+# display activation status of display column <memused> (0: off, 1: auto, 2:on)
+# [type: int, range: [0,2], default: 1]
+display/memused/active = 0
+
+# display activation status of display column <nexternbranchcands> (0: off, 1: auto, 2:on)
+# [type: int, range: [0,2], default: 1]
+display/nexternbranchcands/active = 0
+
+# display activation status of display column <vars> (0: off, 1: auto, 2:on)
+# [type: int, range: [0,2], default: 1]
+display/vars/active = 0
+
+# display activation status of display column <conss> (0: off, 1: auto, 2:on)
+# [type: int, range: [0,2], default: 1]
+display/conss/active = 0
+
+# display activation status of display column <curconss> (0: off, 1: auto, 2:on)
+# [type: int, range: [0,2], default: 1]
+display/curconss/active = 0
+
+# display activation status of display column <curcols> (0: off, 1: auto, 2:on)
+# [type: int, range: [0,2], default: 1]
+display/curcols/active = 0
+
+# display activation status of display column <currows> (0: off, 1: auto, 2:on)
+# [type: int, range: [0,2], default: 1]
+display/currows/active = 0
+
+# display activation status of display column <cuts> (0: off, 1: auto, 2:on)
+# [type: int, range: [0,2], default: 1]
+display/cuts/active = 0
+
+# display activation status of display column <separounds> (0: off, 1: auto, 2:on)
+# [type: int, range: [0,2], default: 1]
+display/separounds/active = 0
+
+# display activation status of display column <poolsize> (0: off, 1: auto, 2:on)
+# [type: int, range: [0,2], default: 1]
+display/poolsize/active = 0
+
+# display activation status of display column <conflicts> (0: off, 1: auto, 2:on)
+# [type: int, range: [0,2], default: 1]
+display/conflicts/active = 0
+
+# display activation status of display column <strongbranchs> (0: off, 1: auto, 2:on)
+# [type: int, range: [0,2], default: 1]
+display/strongbranchs/active = 0
+
+# display activation status of display column <pseudoobj> (0: off, 1: auto, 2:on)
+# [type: int, range: [0,2], default: 1]
+display/pseudoobj/active = 0
+
+# display activation status of display column <estimate> (0: off, 1: auto, 2:on)
+# # [type: int, range: [0,2], default: 1]
+display/estimate/active = 0
+
+# display activation status of display column <maxdepth> (0: off, 1: auto, 2:on)
+# # [type: int, range: [0,2], default: 1]
+display/maxdepth/active = 0
+
+# display activation status of display column <curdualbound> (0: off, 1: auto, 2:on)
+# # [type: int, range: [0,2], default: 1]
+display/curdualbound/active = 0
+
+# priority of separator <gomory>
+# [type: int, advanced: TRUE, range: [-536870912,536870911], default: -1000]
+separating/gomory/priority = 5000
+
+# frequency for calling separator <gomory> (-1: never, 0: only in root node)
+# [type: int, advanced: FALSE, range: [-1,65534], default: 0]
+separating/gomory/freq = 65000
+
+# maximal relative distance from current node's dual bound to primal bound compared to best node's dual bound for applying separator <gomory> (0.0: only on current best node, 1.0: on all nodes)
+# [type: real, advanced: TRUE, range: [0,1], default: 0]
+separating/gomory/maxbounddist = 0.2
+
+# should separator be delayed, if other separators found cuts?
+# [type: bool, advanced: TRUE, range: {TRUE,FALSE}, default: FALSE]
+separating/gomory/delay = FALSE
+
+# maximal number of gomory separation rounds per node (-1: unlimited)
+# [type: int, advanced: FALSE, range: [-1,2147483647], default: 5]
+separating/gomory/maxrounds = 5
+
+# maximal number of gomory separation rounds in the root node (-1: unlimited)
+# [type: int, advanced: FALSE, range: [-1,2147483647], default: 10]
+separating/gomory/maxroundsroot = 10
+
+# maximal number of gomory cuts separated per separation round
+# [type: int, advanced: FALSE, range: [0,2147483647], default: 50]
+separating/gomory/maxsepacuts = 50
+
+# maximal number of gomory cuts separated per separation round in the root node
+# [type: int, advanced: FALSE, range: [0,2147483647], default: 200]
+separating/gomory/maxsepacutsroot = 200
+
+# maximal rank of a gomory cut that could not be scaled to integral coefficients (-1: unlimited)
+# [type: int, advanced: FALSE, range: [-1,2147483647], default: 3]
+separating/gomory/maxrank = 3
+
+# maximal rank of a gomory cut that could be scaled to integral coefficients (-1: unlimited)
+# [type: int, advanced: FALSE, range: [-1,2147483647], default: -1]
+separating/gomory/maxrankintegral = -1
+
+# minimal integrality violation of a basis variable in order to try Gomory cut
+# [type: real, advanced: FALSE, range: [0.0001,0.5], default: 0.01]
+separating/gomory/away = 0.01
+
+# maximal valid range max(|weights|)/min(|weights|) of row weights
+# [type: real, advanced: TRUE, range: [1,1.79769313486232e+308], default: 10000]
+separating/gomory/maxweightrange = 10000
+
+# should generated cuts be removed from the LP if they are no longer tight?
+# [type: bool, advanced: FALSE, range: {TRUE,FALSE}, default: TRUE]
+separating/gomory/dynamiccuts = TRUE
+
+# try to scale cuts to integral coefficients
+# [type: bool, advanced: TRUE, range: {TRUE,FALSE}, default: TRUE]
+separating/gomory/makeintegral = TRUE
+
+# if conversion to integral coefficients failed still consider the cut
+# [type: bool, advanced: TRUE, range: {TRUE,FALSE}, default: TRUE]
+separating/gomory/forcecuts = TRUE
+
+# separate rows with integral slack
+# [type: bool, advanced: TRUE, range: {TRUE,FALSE}, default: TRUE]
+separating/gomory/separaterows = TRUE
+
+# should cuts be added to the delayed cut pool?
+# [type: bool, advanced: TRUE, range: {TRUE,FALSE}, default: TRUE]
+separating/gomory/delayedcuts = TRUE
+
+# choose side types of row (lhs/rhs) based on basis information?
+# [type: bool, advanced: TRUE, range: {TRUE,FALSE}, default: FALSE]
+separating/gomory/sidetypebasis = FALSE
+
+# priority of separator <cmir>
+# [type: int, advanced: TRUE, range: [-536870912,536870911], default: -3000]
+separating/cmir/priority = 5000
+
+# frequency for calling separator <cmir> (-1: never, 0: only in root node)
+# [type: int, advanced: FALSE, range: [-1,65534], default: 0]
+separating/cmir/freq = 65000
+
+# maximal relative distance from current node's dual bound to primal bound compared to best node's dual bound for applying separator <cmir> (0.0: only on current best node, 1.0: on all nodes)
+# [type: real, advanced: TRUE, range: [0,1], default: 0]
+separating/cmir/maxbounddist = 0
+
+# should separator be delayed, if other separators found cuts?
+# [type: bool, advanced: TRUE, range: {TRUE,FALSE}, default: FALSE]
+separating/cmir/delay = FALSE
+
+# maximal number of cmir separation rounds per node (-1: unlimited)
+# [type: int, advanced: FALSE, range: [-1,2147483647], default: 3]
+separating/cmir/maxrounds = 3
+
+# maximal number of cmir separation rounds in the root node (-1: unlimited)
+# [type: int, advanced: FALSE, range: [-1,2147483647], default: 10]
+separating/cmir/maxroundsroot = 10
+
+# maximal number of rows to start aggregation with per separation round (-1: unlimited)
+# [type: int, advanced: TRUE, range: [-1,2147483647], default: 100]
+separating/cmir/maxtries = 100
+
+# maximal number of rows to start aggregation with per separation round in the root node (-1: unlimited)
+# [type: int, advanced: TRUE, range: [-1,2147483647], default: -1]
+separating/cmir/maxtriesroot = -1
+
+# maximal number of consecutive unsuccessful aggregation tries (-1: unlimited)
+# [type: int, advanced: TRUE, range: [-1,2147483647], default: 20]
+separating/cmir/maxfails = 20
+
+# maximal number of consecutive unsuccessful aggregation tries in the root node (-1: unlimited)
+# [type: int, advanced: TRUE, range: [-1,2147483647], default: 100]
+separating/cmir/maxfailsroot = 100
+
+# maximal number of aggregations for each row per separation round
+# [type: int, advanced: TRUE, range: [0,2147483647], default: 3]
+separating/cmir/maxaggrs = 3
+
+# maximal number of aggregations for each row per separation round in the root node
+# [type: int, advanced: TRUE, range: [0,2147483647], default: 6]
+separating/cmir/maxaggrsroot = 6
+
+# maximal number of cmir cuts separated per separation round
+# [type: int, advanced: FALSE, range: [0,2147483647], default: 100]
+separating/cmir/maxsepacuts = 100
+
+# maximal number of cmir cuts separated per separation round in the root node
+# [type: int, advanced: FALSE, range: [0,2147483647], default: 500]
+separating/cmir/maxsepacutsroot = 500
+
+# maximal slack of rows to be used in aggregation
+# [type: real, advanced: TRUE, range: [0,1.79769313486232e+308], default: 0]
+separating/cmir/maxslack = 0
+
+# maximal slack of rows to be used in aggregation in the root node
+# [type: real, advanced: TRUE, range: [0,1.79769313486232e+308], default: 0.1]
+separating/cmir/maxslackroot = 0.1
+
+# weight of row density in the aggregation scoring of the rows
+# [type: real, advanced: TRUE, range: [0,1.79769313486232e+308], default: 0.0001]
+separating/cmir/densityscore = 0.0001
+
+# weight of slack in the aggregation scoring of the rows
+# [type: real, advanced: TRUE, range: [0,1.79769313486232e+308], default: 0.001]
+separating/cmir/slackscore = 0.001
+
+# maximal density of aggregated row
+# [type: real, advanced: TRUE, range: [0,1], default: 0.2]
+separating/cmir/maxaggdensity = 0.2
+
+# maximal density of row to be used in aggregation
+# [type: real, advanced: TRUE, range: [0,1], default: 0.05]
+separating/cmir/maxrowdensity = 0.05
+
+# additional number of variables allowed in row on top of density
+# [type: int, advanced: TRUE, range: [0,2147483647], default: 100]
+separating/cmir/densityoffset = 100
+
+# maximal row aggregation factor
+# [type: real, advanced: TRUE, range: [0,1.79769313486232e+308], default: 10000]
+separating/cmir/maxrowfac = 10000
+
+# maximal number of different deltas to try (-1: unlimited)
+# [type: int, advanced: TRUE, range: [-1,2147483647], default: -1]
+separating/cmir/maxtestdelta = -1
+
+# maximal number of active continuous variables in aggregated row
+# [type: int, advanced: TRUE, range: [0,2147483647], default: 10]
+separating/cmir/maxconts = 10
+
+# maximal number of active continuous variables in aggregated row in the root node
+# [type: int, advanced: TRUE, range: [0,2147483647], default: 10]
+separating/cmir/maxcontsroot = 10
+
+# tolerance for bound distances used to select continuous variable in current aggregated constraint to be eliminated
+# [type: real, advanced: TRUE, range: [0,1.79769313486232e+308], default: 0.1]
+separating/cmir/aggrtol = 0.1
+
+# should negative values also be tested in scaling?
+# [type: bool, advanced: TRUE, range: {TRUE,FALSE}, default: TRUE]
+separating/cmir/trynegscaling = TRUE
+
+# should an additional variable be complemented if f0 = 0?
+# [type: bool, advanced: TRUE, range: {TRUE,FALSE}, default: TRUE]
+separating/cmir/fixintegralrhs = TRUE
+
+# should generated cuts be removed from the LP if they are no longer tight?
+# [type: bool, advanced: FALSE, range: {TRUE,FALSE}, default: TRUE]
+separating/cmir/dynamiccuts = TRUE
+
+

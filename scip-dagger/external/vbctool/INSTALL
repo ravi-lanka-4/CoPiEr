@@ -1,0 +1,51 @@
+INSTALLATION
+===============================================================
+1) Make sure you have a Motif-compatible library (e.g. lesstif)
+   installed on your system where your compiler can find it.
+
+2) Extract the content of vbctool-archive to a directory of 
+   your choice.
+
+3) Download the Motif-Application-Framework from the vbctool
+   homepage and extract it into the subdirectory lib/
+
+4) Go into the subdirectory lib and build all necessary
+   libraries. This is done in the following way:
+
+   First, enter the subdirectory
+
+       cd lib
+
+   Then, go into the subdirectory GFE and build the GFE lib:
+
+       cd GFE
+       make
+       cd ..
+
+   Build the TreeInterface lib:
+
+       cd  GraphInterface
+       make
+       cd ..
+
+   Finally, build the Motif Application Framework:
+
+       cd MotifApp
+       make
+       cd ..
+
+5) You are now ready to build the vbcTool! Go back to
+   the main directory
+
+   	cd ..
+
+   and build:
+
+   	make
+
+6) You can now start the tool by typing 
+
+	./vbctool
+
+7) Enjoy!
+

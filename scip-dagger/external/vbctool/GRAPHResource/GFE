@@ -1,0 +1,252 @@
+! Path to your resource directory, if not in current directory.
+!
+! Example:
+!
+GFE*.ResourceDirectoryPath.labelString:  ./GRAPHResource/
+
+
+
+
+
+GFE*.background:		grey
+GFE*.fontList:	 	-*-new century schoolbook-bold-r-*--12-*
+
+GFE*.QuestionDialog.dialogTitle: Quit
+
+GFE*.drawArea.width: 	600
+GFE*.drawArea.height: 	500
+
+GFE*.displayArea.height:	100
+!*.displayArea*fontList:	-adobe-times-medium-r-*--12-*
+GFE*.displayArea*fontList:		-adobe-courier-medium-o-normal--12-*
+
+GFE*.leftDisplay.columns:	50
+GFE*.leftDisplay.width:	50
+
+GFE*.Color/Context*fontList:	-*-new century schoolbook-bold-r-*--12-*
+!*.Color/Context*fontList:	-daewoo-gothic-medium-r-normal--0-0-100-100-c-0-ksc5601.1987-0
+GFE*.Changer*fontList: 		-*-new century schoolbook-bold-r-*--10-*
+GFE*.Files*fontList:		-*-new century schoolbook-bold-r-*--12-*
+GFE*.Print*fontList:		-*-new century schoolbook-bold-r-*--12-*
+
+GFE*.Print.printRow.topLabel*fontList:	-*-new century schoolbook-bold-r-*--12-*
+GFE*.Changer.chooserRow.ccLabel*fontList:	-*-new century schoolbook-bold-r-*--12-*
+
+GFE*.Look of Nodes*fontList:              	-*-new century schoolbook-bold-r-*--12-*
+
+
+GFE*.fontList1.visibleItemCount:	12
+GFE*.colorList1.visibleItemCount: 	10
+
+GFE*.colorDisplay.height: 70
+
+GFE*.Print.printRow.titlePositionRow.titlePositionRadioRow*fontList: \
+-*-new century schoolbook-bold-r-*--10-*
+
+GFE*.multipleInputField.text.width: 10
+
+!*.subRow.isAligned:	True
+!*.subRow.entryAlignment:	alignment_center
+
+GFE*.nsRow*fontList:       -*-new century schoolbook-bold-r-*--12-*
+
+GFE*.displayInfo*fontList:    -*-new century schoolbook-bold-r-*--12-*
+GFE*.displayNumber*fontList:    -*-new century schoolbook-bold-r-*--12-*
+GFE*.radiusScale*fontList:    -*-new century schoolbook-bold-r-*--12-*
+GFE*.coordScale*fontList:    -*-new century schoolbook-bold-r-*--12-*
+
+
+
+
+
+
+! Main Menu Labels and Mnemonics:
+
+GFE*Interrupt2.labelString:     Interrupt
+GFE*Interrupt2.mnemonic:	I
+
+GFE*Continue2.labelString:	Continue
+GFE*Continue2.mnemonic:		C
+
+GFE*File.labelString:      	File
+GFE*File.mnemonic:         	F
+
+GFE*Edit.labelString:      	Edit
+GFE*Edit.mnemonic:         	E
+
+GFE*View.labelString:      	View
+GFE*View.mnemonic:         	V
+
+GFE*Applications.labelString: 	Applications
+GFE*Applications.mnemonic: 	A
+
+GFE*Algorithm.labelString:    	Algorithm
+GFE*Algorithm.mnemonic:    	o
+
+GFE*Emulation.labelString:   	Emulation
+GFE*Emulation.mnemonic:   		m
+
+GFE*Online.labelString:		Online
+GFE*Online.mnemonic:		O
+
+
+! File Labels and Mnemonics:
+
+GFE*Load.labelString:      Load...
+GFE*Load.mnemonic:         L
+
+GFE*Save.labelString:      Save...
+GFE*Save.mnemonic:         S
+
+GFE*Print.labelString:     Print...
+GFE*Print.mnemonic:        P
+
+GFE*Quit.labelString:      Quit
+GFE*Quit.mnemonic:         Q
+
+
+
+
+
+! Edit Labels and Mnemonics:
+
+GFE*Undo.labelString:      Undo
+GFE*Undo.mnemonic:         U
+
+
+
+
+
+! View Labels and Mnemonics:
+
+GFE*Area Zoom.labelString:                 Area Zoom
+GFE*Area Zoom.mnemonic:                    Z
+
+GFE*Fit To Window.labelString:             Fit To Window
+GFE*Fit To Window.mnemonic:                F
+
+GFE*Repaint.labelString:                   Repaint
+GFE*Repaint.mnemonic:                      R
+
+GFE*Color/Context-Chooser.labelString:     Color/Context-Chooser...
+GFE*Color/Context-Chooser.mnemonic:        C
+
+GFE*Nodes.labelString:                     Nodes...
+GFE*Nodes.mnemonic:                        N
+
+GFE*Edges.labelString:                     Edges...
+GFE*Edges.mnemonic:                        E
+
+
+
+
+! Application Labels and Mnemonics:
+
+GFE*Visualize Algorithm.labelString:       Visualize Algorithm
+GFE*Visualize Algorithm.mnemonic:          V
+
+GFE*Scaler.labelString: 		        Scaler...
+GFE*Scaler.mnemonic: 		  	S
+
+GFE*Browser Mode.labelString:           	Browser Mode
+GFE*Browser Mode.mnemonic:           	B
+
+GFE*Normal Mode.labelString:            	Normal Mode
+GFE*Normal Mode.mnemonic:            	N
+
+
+
+
+!Algorithm Lables and Mnemonics:
+
+GFE*User Algorithm.labelString:           	User Algorithm
+GFE*User Algorithm.mnemonic:           	U
+
+
+
+! Emulation Labels and Mnemonics:
+
+GFE*Start Emulation.labelString:        	Start Emulation
+GFE*Start Emulation.mnemonic:        	E
+
+GFE*Setup.labelString:		  	Setup...
+GFE*Setup.mnemonic:		  	S
+
+GFE*Interrupt.labelString:			Interrupt
+GFE*Interrupt.mnemonic:			I
+
+GFE*Continue.labelString:			Continue
+GFE*Continue.mnemonic:			C
+
+GFE*Stop Emulation.labelString:		Stop Emulation
+GFE*Stop Emulation.mnemonic:		o
+
+
+
+! Online Lables and Mnemonics:
+
+GFE*Standard In.labelString:		Standard In
+GFE*Standard In.mnemonic:			S
+
+
+! Hot-Keys:
+
+GFE*Quit.acceleratorText:  		 Ctrl+Q
+GFE*Quit.accelerator:      		 Ctrl<Key>Q
+
+GFE*Load.acceleratorText:  		 Ctrl+L
+GFE*Load.accelerator:      		 Ctrl<Key>L
+
+!*Save.acceleratorText:  		 Ctrl+S
+!*Save.accelerator:      		 Ctrl<Key>S
+
+GFE*Print.acceleratorText: 		 Ctrl+P
+GFE*Print.accelerator:     		 Ctrl<Key>P
+
+GFE*Undo.acceleratorText:  		 Ctrl+U
+GFE*Undo.accelerator:      		 Ctrl<Key>U
+
+GFE*Area Zoom.acceleratorText:      	 Ctrl+Z
+GFE*Area Zoom.accelerator:         	 Ctrl<Key>Z
+
+GFE*Repaint.acceleratorText:       	 Ctrl+R
+GFE*Repaint.accelerator:           	 Ctrl<Key>R
+
+GFE*Fit To Window.acceleratorText: 	 Ctrl+W
+GFE*Fit To Window.accelerator:     	 Ctrl<Key>W
+
+!*Color/Context-Chooser.acceleratorText: Ctrl+C
+!*Color/Context-Chooser.accelerator:     Ctrl<Key>C
+
+!*Nodes.acceleratorText:         	 Ctrl+N
+!*Nodes.accelerator:                 	 Ctrl<Key>N
+
+!*Edges.acceleratorText:         	 Ctrl+E
+!*Edges.accelerator:             	 Ctrl<Key>E
+
+GFE*Scaler.acceleratorText:          	 Ctrl+S
+GFE*Scaler.accelerator:               	 Ctrl<Key>S
+
+GFE*Browser Mode.acceleratorText:       	 Ctrl+B
+GFE*Browser Mode.accelerator:           	 Ctrl<Key>B
+
+GFE*Normal Mode.acceleratorText:       	 Ctrl+N
+GFE*Normal Mode.accelerator:           	 Ctrl<Key>N
+
+GFE*Interrupt.acceleratorText:       	 Ctrl+I
+GFE*Interrupt.accelerator:           	 Ctrl<Key>I
+
+GFE*Continue.acceleratorText:        	 Ctrl+C
+GFE*Continue.accelerator:            	 Ctrl<Key>C
+
+GFE*Stop Emulation.acceleratorText:  	 Ctrl+O
+GFE*Stop Emulation.accelerator:      	 Ctrl<Key>O
+
+GFE*Standard In.acceleratorText:            Ctrl+T
+GFE*Standard In.accelerator: 		 Ctrl<Key>T
+
+GFE*Interrupt2.acceleratorText:		 Ctrl+I
+GFE*Interrupt2.accelerator:		 Ctrl<Key>I
+
+GFE*Continue2.acceleratorText:		 Ctrl+C
+GFE*Continue2.accelerator:		 Ctrl<Key>C

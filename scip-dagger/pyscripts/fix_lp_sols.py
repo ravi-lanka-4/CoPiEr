@@ -1,0 +1,61 @@
+import os, argparse, re
+import gurobipy as G
+
+# args: Input Folder, Output Folder, file Extension
+def generate_solution(inpFolder, outFolder, fext):
+    # Generate Solution with the same heirarchy as that of the input folder
+    inpFolder = os.path.abspath(inpFolder)
+    outFolder = os.path.abspath(outFolder)
+    common_prefix = os.path.commonprefix([inpFolder, outFolder])
+    fprefix = outFolder + '/' + re.sub(common_prefix, '', inpFolder)
+    
+    # Iterate through every file and generate the result
+    for path, folders, files in os.walk(inpFolder):
+        for f in files:
+            fname, cf_ext = os.path.splitext(f)
+            if fext == cf_ext:
+                # Check if the corresponding file exists in the solution folder
+                cprefix = fprefix + re.sub(inpFolder, '', path)
+                os.system('mkdir -p %s'%cprefix)
+
+                # Run the output generator for the files with extension
+                cfile = path + '/' + f
+                outF =  cprefix + '/' + fname + '.sol'
+
+                # Switch max to min
+                csol = G.read(cfile)
+                obj = csol.getObjective()
+                csol.setObjective(-obj, G.GRB.MINIMIZE)
+                csol.write(cfile)
+
+                # Convert exponent objective value to float representation
+                # negate the solution files objective value
+                with open(outF, 'r') as fp:
+                    lines = fp.readlines()
+                    lines[0] = lines[0].strip('# Objective value = \n')
+                    lines[0] = '#Objective value = -%f\n'%float(lines[0])
+
+                with open(outF, 'w') as fp:
+                    for line in lines:
+                       fp.write(line)
+
+def firstPassCommandLine():
+    
+    # Creating the parser for the input arguments
+    parser = argparse.ArgumentParser(description='Path Planning based on MILP')
+
+    # Positional argument - Input XML file
+    parser.add_argument('-i', type=str, default='../data/psulu',
+                        help='Input Folder to process the files', dest='inpFolder')
+    parser.add_argument('-o', type=str, default='../solution/',
+                        help='Output Folder', dest='outFolder')
+    parser.add_argument('-e', type=str, default='.lp',
+                        help='File Extension', dest='ext')
+
+    # Parse input
+    args = parser.parse_args()
+    return args
+
+if __name__ == '__main__':
+    args = firstPassCommandLine()
+    generate_solution(args.inpFolder, args.outFolder, args.ext)

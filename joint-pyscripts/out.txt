@@ -1,0 +1,1223 @@
+Preparing [0;31m Soft Link [0m
+[0;31m Empty unlabeled sols folder [0m
+Preparing [0;31m Soft Link [0m
+[0;31m Empty unlabeled sols folder [0m
+current data: /work/05632/subrahma//latest/co-training//data//mvc_test/
+ftype: lpfiles
+suffix: .lp
+cexp_pre: mvc_0.25_cotrain_search_lp
+iter: 0
+Training [0;31m SCIP [0m
+training data: /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles
+number of passes: 1
+neural nets: true
+data suffix: .lp
+folder index low: 10
+folder index high: 11
+folder index increment: 1
+experiment name: mvc_0.25_cotrain_search_lp_0
+sel norm bool: true
+Optimal Solution: /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp/
+/work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles
+input10.lp
+
+bin/scipdagger -n 200 -r 1 -s scip.set -f /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input10.lp -o /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input10.sol --nodepru oracle --nodesel oracle --nodeseltrj /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/mvc_0.25_cotrain_search_lp_0/train/input10.search.trj.0 --pscale 2 --sscale 2 --probfeats 
+include nodepru oracle
+include nodesel oracle
+
+read problem </work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input10.lp>
+============
+
+original problem has 100 variables (100 bin, 0 int, 0 impl, 0 cont) and 765 constraints
+
+solve problem
+=============
+
+unknown variable <#> in line 1 of solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input10.sol>
+  (further unknown variables are ignored)
+optimal solution from solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input10.sol> was read
+unknown variable <#> in line 1 of solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input10.sol>
+  (further unknown variables are ignored)
+optimal solution from solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input10.sol> was read
+presolving (2 rounds: 2 fast, 2 medium, 2 exhaustive):
+ 0 deleted vars, 0 deleted constraints, 0 added constraints, 0 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 765 cliques
+presolved problem has 100 variables (100 bin, 0 int, 0 impl, 0 cont) and 765 constraints
+storing VBC information in file </tmp/vbc.txt>
+
+ time | node  | left  | mem |depth|pdpt |frac |    lpobj     | avgdualbound |  dualbound   | primalbound  | cutoffbound  |  gap   |nsols
+k 0.0s|     1 |     0 |3200k|   2 |   0 |   - | 8.100000e+01 | 0.000000e+00 | 0.000000e+00 | 8.100000e+01 | 8.000010e+01 |    Inf |    2
+  0.6s|     1 |     2 |  15M|   0 |   0 | 100 | 7.003146e+01 | 7.118900e+01 | 7.051683e+01 | 8.100000e+01 | 8.000010e+01 |  14.87%|   73
+* 0.8s|    10 |     9 |  15M|  11 |   0 |   - | 7.900000e+01 | 7.454093e+01 | 7.051683e+01 | 7.900000e+01 | 7.800010e+01 |  12.03%|  174
+* 0.8s|    11 |     9 |  15M|  12 |   0 |   - | 7.800000e+01 | 7.426770e+01 | 7.051683e+01 | 7.800000e+01 | 7.700010e+01 |  10.61%|  180
+
+SCIP Status        : problem is solved [optimal solution found]
+Solving Time (sec) : 0.89
+Solving Nodes      : 28
+Primal Bound       : +7.80000000000000e+01 (206 solutions)
+Dual Bound         : +7.05168316831683e+01
+Gap                : 10.61 %
+
+Statistics
+==========
+
+SCIP Status        : problem is solved [optimal solution found]
+Total Time         :       0.89
+  solving          :       0.89
+  presolving       :       0.01 (included in solving)
+  reading          :       0.00
+  copying          :       0.00 (0 times copied the problem)
+Original Problem   :
+  Problem name     : /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input10.lp
+  Variables        : 100 (100 binary, 0 integer, 0 implicit integer, 0 continuous)
+  Constraints      : 765 initial, 765 maximal
+  Objective sense  : minimize
+Presolved Problem  :
+  Problem name     : t_/work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input10.lp
+  Variables        : 100 (100 binary, 0 integer, 0 implicit integer, 0 continuous)
+  Constraints      : 765 initial, 765 maximal
+B&B Tree           :
+  number of runs   :          1
+  nodes            :         28 (22 internal, 6 leaves)
+  feasible leaves  :          0
+  infeas. leaves   :          0
+  objective leaves :          6
+  nodes (total)    :         28 (22 internal, 6 leaves)
+  nodes left       :          0
+  max depth        :         10
+  max depth (total):         10
+  backtracks       :         11 (39.3%)
+  early backtracks :          0 (0.0%)
+  nodes exc. ref.  :          0 (0.0%)
+  delayed cutoffs  :          0
+  repropagations   :          0 (0 domain reductions, 0 cutoffs)
+  avg switch length:       3.14
+  switching time   :       0.00
+Root Node          :
+  First LP value   : +5.00000000000000e+01
+  First LP Iters   :        103
+  First LP Time    :       0.00
+  Final Dual Bound : +7.05168316831683e+01
+  Final Root Iters :       1670
+  Root LP Estimate : +8.33368602970742e+01
+Solution           :
+  Solutions found  :        206 (4 improvements)
+  First Solution   : +1.00000000000000e+02   (in run 1, after 0 nodes, 0.00 seconds, depth 0, found by <trivial>)
+  Gap First Sol.   :   infinite
+  Gap Last Sol.    :      10.61 %
+  Primal Bound     : +7.80000000000000e+01   (in run 1, after 11 nodes, 0.83 seconds, depth 12, found by <relaxation>)
+  Dual Bound       : +7.05168316831683e+01
+  Gap              :      10.61 %
+  Avg. Gap         :      16.12 % (14.35 primal-dual integral)
+input11.lp
+
+bin/scipdagger -n 200 -r 1 -s scip.set -f /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input11.lp -o /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input11.sol --nodepru oracle --nodesel oracle --nodeseltrj /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/mvc_0.25_cotrain_search_lp_0/train/input11.search.trj.0 --pscale 2 --sscale 2 --probfeats 
+include nodepru oracle
+include nodesel oracle
+
+read problem </work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input11.lp>
+============
+
+original problem has 100 variables (100 bin, 0 int, 0 impl, 0 cont) and 758 constraints
+
+solve problem
+=============
+
+unknown variable <#> in line 1 of solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input11.sol>
+  (further unknown variables are ignored)
+optimal solution from solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input11.sol> was read
+unknown variable <#> in line 1 of solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input11.sol>
+  (further unknown variables are ignored)
+optimal solution from solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input11.sol> was read
+presolving (2 rounds: 2 fast, 2 medium, 2 exhaustive):
+ 0 deleted vars, 0 deleted constraints, 0 added constraints, 0 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 758 cliques
+presolved problem has 100 variables (100 bin, 0 int, 0 impl, 0 cont) and 758 constraints
+storing VBC information in file </tmp/vbc.txt>
+
+ time | node  | left  | mem |depth|pdpt |frac |    lpobj     | avgdualbound |  dualbound   | primalbound  | cutoffbound  |  gap   |nsols
+k 0.0s|     1 |     0 |3156k|   2 |   0 |   - | 8.000000e+01 | 0.000000e+00 | 0.000000e+00 | 8.000000e+01 | 7.900010e+01 |    Inf |    2
+  0.5s|     1 |     2 |  18M|   0 |   0 | 100 | 7.005718e+01 | 7.099480e+01 | 7.054206e+01 | 8.000000e+01 | 7.900010e+01 |  13.41%|   59
+* 0.6s|     5 |     3 |  18M|   6 |   0 |   - | 7.600000e+01 | 7.269801e+01 | 7.054206e+01 | 7.600000e+01 | 7.500010e+01 |   7.74%|  145
+
+SCIP Status        : problem is solved [optimal solution found]
+Solving Time (sec) : 0.67
+Solving Nodes      : 6
+Primal Bound       : +7.60000000000000e+01 (158 solutions)
+Dual Bound         : +7.05420551717474e+01
+Gap                : 7.74 %
+
+Statistics
+==========
+
+SCIP Status        : problem is solved [optimal solution found]
+Total Time         :       0.67
+  solving          :       0.67
+  presolving       :       0.01 (included in solving)
+  reading          :       0.00
+  copying          :       0.00 (0 times copied the problem)
+Original Problem   :
+  Problem name     : /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input11.lp
+  Variables        : 100 (100 binary, 0 integer, 0 implicit integer, 0 continuous)
+  Constraints      : 758 initial, 758 maximal
+  Objective sense  : minimize
+Presolved Problem  :
+  Problem name     : t_/work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input11.lp
+  Variables        : 100 (100 binary, 0 integer, 0 implicit integer, 0 continuous)
+  Constraints      : 758 initial, 758 maximal
+B&B Tree           :
+  number of runs   :          1
+  nodes            :          6 (4 internal, 2 leaves)
+  feasible leaves  :          0
+  infeas. leaves   :          0
+  objective leaves :          2
+  nodes (total)    :          6 (4 internal, 2 leaves)
+  nodes left       :          0
+  max depth        :          4
+  max depth (total):          4
+  backtracks       :          3 (50.0%)
+  early backtracks :          0 (0.0%)
+  nodes exc. ref.  :          0 (0.0%)
+  delayed cutoffs  :          0
+  repropagations   :          0 (0 domain reductions, 0 cutoffs)
+  avg switch length:       2.67
+  switching time   :       0.00
+Root Node          :
+  First LP value   : +5.00000000000000e+01
+  First LP Iters   :        106
+  First LP Time    :       0.00
+  Final Dual Bound : +7.05420551717474e+01
+  Final Root Iters :       1667
+  Root LP Estimate : +8.10020446214134e+01
+Solution           :
+  Solutions found  :        158 (3 improvements)
+  First Solution   : +1.00000000000000e+02   (in run 1, after 0 nodes, 0.00 seconds, depth 0, found by <trivial>)
+  Gap First Sol.   :   infinite
+  Gap Last Sol.    :       7.74 %
+  Primal Bound     : +7.60000000000000e+01   (in run 1, after 5 nodes, 0.64 seconds, depth 6, found by <relaxation>)
+  Dual Bound       : +7.05420551717474e+01
+  Gap              :       7.74 %
+  Avg. Gap         :      15.97 % (10.70 primal-dual integral)
+input12.lp
+
+bin/scipdagger -n 200 -r 1 -s scip.set -f /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input12.lp -o /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input12.sol --nodepru oracle --nodesel oracle --nodeseltrj /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/mvc_0.25_cotrain_search_lp_0/train/input12.search.trj.0 --pscale 2 --sscale 2 --probfeats 
+include nodepru oracle
+include nodesel oracle
+
+read problem </work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input12.lp>
+============
+
+original problem has 100 variables (100 bin, 0 int, 0 impl, 0 cont) and 750 constraints
+
+solve problem
+=============
+
+unknown variable <#> in line 1 of solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input12.sol>
+  (further unknown variables are ignored)
+optimal solution from solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input12.sol> was read
+unknown variable <#> in line 1 of solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input12.sol>
+  (further unknown variables are ignored)
+optimal solution from solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input12.sol> was read
+presolving (2 rounds: 2 fast, 2 medium, 2 exhaustive):
+ 0 deleted vars, 0 deleted constraints, 0 added constraints, 0 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 750 cliques
+presolved problem has 100 variables (100 bin, 0 int, 0 impl, 0 cont) and 750 constraints
+storing VBC information in file </tmp/vbc.txt>
+
+ time | node  | left  | mem |depth|pdpt |frac |    lpobj     | avgdualbound |  dualbound   | primalbound  | cutoffbound  |  gap   |nsols
+k 0.0s|     1 |     0 |3143k|   2 |   0 |   - | 7.900000e+01 | 0.000000e+00 | 0.000000e+00 | 7.900000e+01 | 7.800010e+01 |    Inf |    2
+  0.5s|     1 |     2 |  16M|   0 |   0 |  99 | 6.920712e+01 | 7.047124e+01 | 6.971488e+01 | 7.900000e+01 | 7.800010e+01 |  13.32%|   61
+* 0.7s|     6 |     4 |  16M|   7 |   0 |   - | 7.600000e+01 | 7.229810e+01 | 6.971488e+01 | 7.600000e+01 | 7.500010e+01 |   9.02%|  150
+* 0.7s|     6 |     4 |  16M|   7 |   0 |   - | 7.500000e+01 | 7.236477e+01 | 6.971488e+01 | 7.500000e+01 | 7.400010e+01 |   7.58%|  163
+
+SCIP Status        : problem is solved [optimal solution found]
+Solving Time (sec) : 0.68
+Solving Nodes      : 10
+Primal Bound       : +7.50000000000000e+01 (164 solutions)
+Dual Bound         : +6.97148751357221e+01
+Gap                : 7.58 %
+
+Statistics
+==========
+
+SCIP Status        : problem is solved [optimal solution found]
+Total Time         :       0.68
+  solving          :       0.68
+  presolving       :       0.01 (included in solving)
+  reading          :       0.00
+  copying          :       0.00 (0 times copied the problem)
+Original Problem   :
+  Problem name     : /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input12.lp
+  Variables        : 100 (100 binary, 0 integer, 0 implicit integer, 0 continuous)
+  Constraints      : 750 initial, 750 maximal
+  Objective sense  : minimize
+Presolved Problem  :
+  Problem name     : t_/work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input12.lp
+  Variables        : 100 (100 binary, 0 integer, 0 implicit integer, 0 continuous)
+  Constraints      : 750 initial, 750 maximal
+B&B Tree           :
+  number of runs   :          1
+  nodes            :         10 (6 internal, 4 leaves)
+  feasible leaves  :          0
+  infeas. leaves   :          0
+  objective leaves :          4
+  nodes (total)    :         10 (6 internal, 4 leaves)
+  nodes left       :          0
+  max depth        :          6
+  max depth (total):          6
+  backtracks       :          4 (40.0%)
+  early backtracks :          0 (0.0%)
+  nodes exc. ref.  :          0 (0.0%)
+  delayed cutoffs  :          0
+  repropagations   :          0 (0 domain reductions, 0 cutoffs)
+  avg switch length:       2.40
+  switching time   :       0.00
+Root Node          :
+  First LP value   : +5.00000000000000e+01
+  First LP Iters   :        103
+  First LP Time    :       0.00
+  Final Dual Bound : +6.97148751357221e+01
+  Final Root Iters :       1688
+  Root LP Estimate : +8.05691639437949e+01
+Solution           :
+  Solutions found  :        164 (4 improvements)
+  First Solution   : +1.00000000000000e+02   (in run 1, after 0 nodes, 0.00 seconds, depth 0, found by <trivial>)
+  Gap First Sol.   :   infinite
+  Gap Last Sol.    :       7.58 %
+  Primal Bound     : +7.50000000000000e+01   (in run 1, after 6 nodes, 0.66 seconds, depth 7, found by <relaxation>)
+  Dual Bound       : +6.97148751357221e+01
+  Gap              :       7.58 %
+  Avg. Gap         :      16.39 % (11.14 primal-dual integral)
+input13.lp
+
+bin/scipdagger -n 200 -r 1 -s scip.set -f /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input13.lp -o /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input13.sol --nodepru oracle --nodesel oracle --nodeseltrj /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/mvc_0.25_cotrain_search_lp_0/train/input13.search.trj.0 --pscale 2 --sscale 2 --probfeats 
+include nodepru oracle
+include nodesel oracle
+
+read problem </work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input13.lp>
+============
+
+original problem has 100 variables (100 bin, 0 int, 0 impl, 0 cont) and 707 constraints
+
+solve problem
+=============
+
+unknown variable <#> in line 1 of solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input13.sol>
+  (further unknown variables are ignored)
+optimal solution from solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input13.sol> was read
+unknown variable <#> in line 1 of solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input13.sol>
+  (further unknown variables are ignored)
+optimal solution from solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input13.sol> was read
+presolving (2 rounds: 2 fast, 2 medium, 2 exhaustive):
+ 0 deleted vars, 0 deleted constraints, 0 added constraints, 0 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 707 cliques
+presolved problem has 100 variables (100 bin, 0 int, 0 impl, 0 cont) and 707 constraints
+storing VBC information in file </tmp/vbc.txt>
+
+ time | node  | left  | mem |depth|pdpt |frac |    lpobj     | avgdualbound |  dualbound   | primalbound  | cutoffbound  |  gap   |nsols
+k 0.0s|     1 |     0 |3055k|   2 |   0 |   - | 7.700000e+01 | 0.000000e+00 | 0.000000e+00 | 7.700000e+01 | 7.600010e+01 |    Inf |    2
+  0.6s|     1 |     2 |  15M|   0 |   0 |  99 | 6.861835e+01 | 6.949270e+01 | 6.903072e+01 | 7.700000e+01 | 7.600010e+01 |  11.54%|   65
+* 0.9s|    13 |     9 |  15M|  12 |   0 |   - | 7.600000e+01 | 7.235628e+01 | 6.903072e+01 | 7.600000e+01 | 7.500010e+01 |  10.10%|  193
+
+SCIP Status        : problem is solved [optimal solution found]
+Solving Time (sec) : 0.94
+Solving Nodes      : 34
+Primal Bound       : +7.60000000000000e+01 (223 solutions)
+Dual Bound         : +6.90307157131226e+01
+Gap                : 10.10 %
+
+Statistics
+==========
+
+SCIP Status        : problem is solved [optimal solution found]
+Total Time         :       0.94
+  solving          :       0.94
+  presolving       :       0.01 (included in solving)
+  reading          :       0.00
+  copying          :       0.00 (0 times copied the problem)
+Original Problem   :
+  Problem name     : /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input13.lp
+  Variables        : 100 (100 binary, 0 integer, 0 implicit integer, 0 continuous)
+  Constraints      : 707 initial, 707 maximal
+  Objective sense  : minimize
+Presolved Problem  :
+  Problem name     : t_/work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input13.lp
+  Variables        : 100 (100 binary, 0 integer, 0 implicit integer, 0 continuous)
+  Constraints      : 707 initial, 707 maximal
+B&B Tree           :
+  number of runs   :          1
+  nodes            :         34 (28 internal, 6 leaves)
+  feasible leaves  :          1
+  infeas. leaves   :          0
+  objective leaves :          5
+  nodes (total)    :         34 (28 internal, 6 leaves)
+  nodes left       :          0
+  max depth        :         12
+  max depth (total):         12
+  backtracks       :         13 (38.2%)
+  early backtracks :          0 (0.0%)
+  nodes exc. ref.  :          0 (0.0%)
+  delayed cutoffs  :          0
+  repropagations   :          0 (0 domain reductions, 0 cutoffs)
+  avg switch length:       3.18
+  switching time   :       0.00
+Root Node          :
+  First LP value   : +5.00000000000000e+01
+  First LP Iters   :        106
+  First LP Time    :       0.00
+  Final Dual Bound : +6.90307157131226e+01
+  Final Root Iters :       1672
+  Root LP Estimate : +8.24131164336036e+01
+Solution           :
+  Solutions found  :        223 (3 improvements)
+  First Solution   : +1.00000000000000e+02   (in run 1, after 0 nodes, 0.00 seconds, depth 0, found by <trivial>)
+  Gap First Sol.   :   infinite
+  Gap Last Sol.    :      10.10 %
+  Primal Bound     : +7.60000000000000e+01   (in run 1, after 13 nodes, 0.88 seconds, depth 12, found by <relaxation>)
+  Dual Bound       : +6.90307157131226e+01
+  Gap              :      10.10 %
+  Avg. Gap         :      13.19 % (12.39 primal-dual integral)
+input14.lp
+
+bin/scipdagger -n 200 -r 1 -s scip.set -f /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input14.lp -o /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input14.sol --nodepru oracle --nodesel oracle --nodeseltrj /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/mvc_0.25_cotrain_search_lp_0/train/input14.search.trj.0 --pscale 2 --sscale 2 --probfeats 
+include nodepru oracle
+include nodesel oracle
+
+read problem </work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input14.lp>
+============
+
+original problem has 100 variables (100 bin, 0 int, 0 impl, 0 cont) and 755 constraints
+
+solve problem
+=============
+
+unknown variable <#> in line 1 of solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input14.sol>
+  (further unknown variables are ignored)
+optimal solution from solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input14.sol> was read
+unknown variable <#> in line 1 of solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input14.sol>
+  (further unknown variables are ignored)
+optimal solution from solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input14.sol> was read
+presolving (2 rounds: 2 fast, 2 medium, 2 exhaustive):
+ 0 deleted vars, 0 deleted constraints, 0 added constraints, 0 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 755 cliques
+presolved problem has 100 variables (100 bin, 0 int, 0 impl, 0 cont) and 755 constraints
+storing VBC information in file </tmp/vbc.txt>
+
+ time | node  | left  | mem |depth|pdpt |frac |    lpobj     | avgdualbound |  dualbound   | primalbound  | cutoffbound  |  gap   |nsols
+k 0.0s|     1 |     0 |3155k|   2 |   0 |   - | 7.700000e+01 | 0.000000e+00 | 0.000000e+00 | 7.700000e+01 | 7.600010e+01 |    Inf |    2
+  0.5s|     1 |     2 |  17M|   0 |   0 |  99 | 6.983650e+01 | 7.093872e+01 | 7.026263e+01 | 7.700000e+01 | 7.600010e+01 |   9.59%|   60
+* 1.0s|    19 |    14 |  17M|  20 |   0 |   - | 7.500000e+01 | 7.272564e+01 | 7.150000e+01 | 7.500000e+01 | 7.400010e+01 |   4.90%|  161
+
+SCIP Status        : problem is solved [optimal solution found]
+Solving Time (sec) : 1.13
+Solving Nodes      : 53
+Primal Bound       : +7.50000000000000e+01 (184 solutions)
+Dual Bound         : +7.15000000000000e+01
+Gap                : 4.90 %
+
+Statistics
+==========
+
+SCIP Status        : problem is solved [optimal solution found]
+Total Time         :       1.13
+  solving          :       1.13
+  presolving       :       0.01 (included in solving)
+  reading          :       0.00
+  copying          :       0.00 (0 times copied the problem)
+Original Problem   :
+  Problem name     : /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input14.lp
+  Variables        : 100 (100 binary, 0 integer, 0 implicit integer, 0 continuous)
+  Constraints      : 755 initial, 755 maximal
+  Objective sense  : minimize
+Presolved Problem  :
+  Problem name     : t_/work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input14.lp
+  Variables        : 100 (100 binary, 0 integer, 0 implicit integer, 0 continuous)
+  Constraints      : 755 initial, 755 maximal
+B&B Tree           :
+  number of runs   :          1
+  nodes            :         53 (39 internal, 14 leaves)
+  feasible leaves  :          0
+  infeas. leaves   :          0
+  objective leaves :         14
+  nodes (total)    :         53 (39 internal, 14 leaves)
+  nodes left       :          0
+  max depth        :         18
+  max depth (total):         18
+  backtracks       :         17 (32.1%)
+  early backtracks :          0 (0.0%)
+  nodes exc. ref.  :          0 (0.0%)
+  delayed cutoffs  :          0
+  repropagations   :          0 (0 domain reductions, 0 cutoffs)
+  avg switch length:       2.83
+  switching time   :       0.00
+Root Node          :
+  First LP value   : +5.00000000000000e+01
+  First LP Iters   :        106
+  First LP Time    :       0.00
+  Final Dual Bound : +7.02626262626263e+01
+  Final Root Iters :       1557
+  Root LP Estimate : +7.94323644089718e+01
+Solution           :
+  Solutions found  :        184 (3 improvements)
+  First Solution   : +1.00000000000000e+02   (in run 1, after 0 nodes, 0.00 seconds, depth 0, found by <trivial>)
+  Gap First Sol.   :   infinite
+  Gap Last Sol.    :       4.90 %
+  Primal Bound     : +7.50000000000000e+01   (in run 1, after 19 nodes, 1.04 seconds, depth 20, found by <relaxation>)
+  Dual Bound       : +7.15000000000000e+01
+  Gap              :       4.90 %
+  Avg. Gap         :      10.67 % (12.05 primal-dual integral)
+input15.lp
+
+bin/scipdagger -n 200 -r 1 -s scip.set -f /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input15.lp -o /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input15.sol --nodepru oracle --nodesel oracle --nodeseltrj /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/mvc_0.25_cotrain_search_lp_0/train/input15.search.trj.0 --pscale 2 --sscale 2 --probfeats 
+include nodepru oracle
+include nodesel oracle
+
+read problem </work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input15.lp>
+============
+
+original problem has 100 variables (100 bin, 0 int, 0 impl, 0 cont) and 733 constraints
+
+solve problem
+=============
+
+unknown variable <#> in line 1 of solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input15.sol>
+  (further unknown variables are ignored)
+optimal solution from solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input15.sol> was read
+unknown variable <#> in line 1 of solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input15.sol>
+  (further unknown variables are ignored)
+optimal solution from solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input15.sol> was read
+presolving (2 rounds: 2 fast, 2 medium, 2 exhaustive):
+ 0 deleted vars, 0 deleted constraints, 0 added constraints, 0 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 733 cliques
+presolved problem has 100 variables (100 bin, 0 int, 0 impl, 0 cont) and 733 constraints
+storing VBC information in file </tmp/vbc.txt>
+
+ time | node  | left  | mem |depth|pdpt |frac |    lpobj     | avgdualbound |  dualbound   | primalbound  | cutoffbound  |  gap   |nsols
+k 0.0s|     1 |     0 |3059k|   2 |   0 |   - | 7.700000e+01 | 0.000000e+00 | 0.000000e+00 | 7.700000e+01 | 7.600010e+01 |    Inf |    2
+  0.5s|     1 |     2 |  17M|   0 |   0 | 100 | 6.867930e+01 | 6.963236e+01 | 6.915698e+01 | 7.700000e+01 | 7.600010e+01 |  11.34%|   54
+* 1.0s|    19 |    15 |  17M|  20 |   0 |   - | 7.600000e+01 | 7.211285e+01 | 7.058314e+01 | 7.600000e+01 | 7.500010e+01 |   7.67%|  173
+
+SCIP Status        : problem is solved [optimal solution found]
+Solving Time (sec) : 1.09
+Solving Nodes      : 56
+Primal Bound       : +7.60000000000000e+01 (213 solutions)
+Dual Bound         : +7.05831381733021e+01
+Gap                : 7.67 %
+
+Statistics
+==========
+
+SCIP Status        : problem is solved [optimal solution found]
+Total Time         :       1.09
+  solving          :       1.09
+  presolving       :       0.01 (included in solving)
+  reading          :       0.00
+  copying          :       0.00 (0 times copied the problem)
+Original Problem   :
+  Problem name     : /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input15.lp
+  Variables        : 100 (100 binary, 0 integer, 0 implicit integer, 0 continuous)
+  Constraints      : 733 initial, 733 maximal
+  Objective sense  : minimize
+Presolved Problem  :
+  Problem name     : t_/work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input15.lp
+  Variables        : 100 (100 binary, 0 integer, 0 implicit integer, 0 continuous)
+  Constraints      : 733 initial, 733 maximal
+B&B Tree           :
+  number of runs   :          1
+  nodes            :         56 (49 internal, 7 leaves)
+  feasible leaves  :          0
+  infeas. leaves   :          0
+  objective leaves :          7
+  nodes (total)    :         56 (49 internal, 7 leaves)
+  nodes left       :          0
+  max depth        :         18
+  max depth (total):         18
+  backtracks       :         24 (42.9%)
+  early backtracks :          0 (0.0%)
+  nodes exc. ref.  :          0 (0.0%)
+  delayed cutoffs  :          0
+  repropagations   :          0 (0 domain reductions, 0 cutoffs)
+  avg switch length:       3.43
+  switching time   :       0.00
+Root Node          :
+  First LP value   : +5.00000000000000e+01
+  First LP Iters   :        106
+  First LP Time    :       0.00
+  Final Dual Bound : +6.91569767441861e+01
+  Final Root Iters :       1728
+  Root LP Estimate : +8.15963504541871e+01
+Solution           :
+  Solutions found  :        213 (3 improvements)
+  First Solution   : +1.00000000000000e+02   (in run 1, after 0 nodes, 0.00 seconds, depth 0, found by <trivial>)
+  Gap First Sol.   :   infinite
+  Gap Last Sol.    :       7.67 %
+  Primal Bound     : +7.60000000000000e+01   (in run 1, after 19 nodes, 0.99 seconds, depth 20, found by <relaxation>)
+  Dual Bound       : +7.05831381733021e+01
+  Gap              :       7.67 %
+  Avg. Gap         :      12.54 % (13.67 primal-dual integral)
+input16.lp
+
+bin/scipdagger -n 200 -r 1 -s scip.set -f /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input16.lp -o /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input16.sol --nodepru oracle --nodesel oracle --nodeseltrj /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/mvc_0.25_cotrain_search_lp_0/train/input16.search.trj.0 --pscale 2 --sscale 2 --probfeats 
+include nodepru oracle
+include nodesel oracle
+
+read problem </work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input16.lp>
+============
+
+original problem has 100 variables (100 bin, 0 int, 0 impl, 0 cont) and 778 constraints
+
+solve problem
+=============
+
+unknown variable <#> in line 1 of solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input16.sol>
+  (further unknown variables are ignored)
+optimal solution from solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input16.sol> was read
+unknown variable <#> in line 1 of solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input16.sol>
+  (further unknown variables are ignored)
+optimal solution from solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input16.sol> was read
+presolving (2 rounds: 2 fast, 2 medium, 2 exhaustive):
+ 0 deleted vars, 0 deleted constraints, 0 added constraints, 0 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 778 cliques
+presolved problem has 100 variables (100 bin, 0 int, 0 impl, 0 cont) and 778 constraints
+storing VBC information in file </tmp/vbc.txt>
+
+ time | node  | left  | mem |depth|pdpt |frac |    lpobj     | avgdualbound |  dualbound   | primalbound  | cutoffbound  |  gap   |nsols
+k 0.0s|     1 |     0 |3438k|   2 |   0 |   - | 8.000000e+01 | 0.000000e+00 | 0.000000e+00 | 8.000000e+01 | 7.900010e+01 |    Inf |    2
+  0.5s|     1 |     2 |  16M|   0 |   0 |  98 | 7.052262e+01 | 7.138271e+01 | 7.091781e+01 | 8.000000e+01 | 7.900010e+01 |  12.81%|   64
+* 1.0s|    19 |    14 |  16M|  20 |   0 |   - | 7.600000e+01 | 7.343788e+01 | 7.200000e+01 | 7.600000e+01 | 7.500010e+01 |   5.56%|  160
+
+SCIP Status        : problem is solved [optimal solution found]
+Solving Time (sec) : 1.13
+Solving Nodes      : 53
+Primal Bound       : +7.60000000000000e+01 (192 solutions)
+Dual Bound         : +7.20000000000000e+01
+Gap                : 5.56 %
+
+Statistics
+==========
+
+SCIP Status        : problem is solved [optimal solution found]
+Total Time         :       1.13
+  solving          :       1.13
+  presolving       :       0.01 (included in solving)
+  reading          :       0.00
+  copying          :       0.00 (0 times copied the problem)
+Original Problem   :
+  Problem name     : /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input16.lp
+  Variables        : 100 (100 binary, 0 integer, 0 implicit integer, 0 continuous)
+  Constraints      : 778 initial, 778 maximal
+  Objective sense  : minimize
+Presolved Problem  :
+  Problem name     : t_/work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input16.lp
+  Variables        : 100 (100 binary, 0 integer, 0 implicit integer, 0 continuous)
+  Constraints      : 778 initial, 778 maximal
+B&B Tree           :
+  number of runs   :          1
+  nodes            :         53 (42 internal, 11 leaves)
+  feasible leaves  :          0
+  infeas. leaves   :          0
+  objective leaves :         11
+  nodes (total)    :         53 (42 internal, 11 leaves)
+  nodes left       :          0
+  max depth        :         18
+  max depth (total):         18
+  backtracks       :         19 (35.8%)
+  early backtracks :          0 (0.0%)
+  nodes exc. ref.  :          0 (0.0%)
+  delayed cutoffs  :          0
+  repropagations   :          0 (0 domain reductions, 0 cutoffs)
+  avg switch length:       3.06
+  switching time   :       0.00
+Root Node          :
+  First LP value   : +5.00000000000000e+01
+  First LP Iters   :        105
+  First LP Time    :       0.00
+  Final Dual Bound : +7.09178082191781e+01
+  Final Root Iters :       1809
+  Root LP Estimate : +7.66326500659849e+01
+Solution           :
+  Solutions found  :        192 (3 improvements)
+  First Solution   : +1.00000000000000e+02   (in run 1, after 0 nodes, 0.00 seconds, depth 0, found by <trivial>)
+  Gap First Sol.   :   infinite
+  Gap Last Sol.    :       5.56 %
+  Primal Bound     : +7.60000000000000e+01   (in run 1, after 19 nodes, 1.04 seconds, depth 20, found by <relaxation>)
+  Dual Bound       : +7.20000000000000e+01
+  Gap              :       5.56 %
+  Avg. Gap         :      13.14 % (14.85 primal-dual integral)
+input17.lp
+
+bin/scipdagger -n 200 -r 1 -s scip.set -f /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input17.lp -o /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input17.sol --nodepru oracle --nodesel oracle --nodeseltrj /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/mvc_0.25_cotrain_search_lp_0/train/input17.search.trj.0 --pscale 2 --sscale 2 --probfeats 
+include nodepru oracle
+include nodesel oracle
+
+read problem </work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input17.lp>
+============
+
+original problem has 100 variables (100 bin, 0 int, 0 impl, 0 cont) and 758 constraints
+
+solve problem
+=============
+
+unknown variable <#> in line 1 of solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input17.sol>
+  (further unknown variables are ignored)
+optimal solution from solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input17.sol> was read
+unknown variable <#> in line 1 of solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input17.sol>
+  (further unknown variables are ignored)
+optimal solution from solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input17.sol> was read
+presolving (2 rounds: 2 fast, 2 medium, 2 exhaustive):
+ 0 deleted vars, 0 deleted constraints, 0 added constraints, 0 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 758 cliques
+presolved problem has 100 variables (100 bin, 0 int, 0 impl, 0 cont) and 758 constraints
+storing VBC information in file </tmp/vbc.txt>
+
+ time | node  | left  | mem |depth|pdpt |frac |    lpobj     | avgdualbound |  dualbound   | primalbound  | cutoffbound  |  gap   |nsols
+k 0.0s|     1 |     0 |3142k|   2 |   0 |   - | 8.100000e+01 | 0.000000e+00 | 0.000000e+00 | 8.100000e+01 | 8.000010e+01 |    Inf |    2
+b 0.0s|     1 |     0 |3142k|   0 |   0 |   - |      --      | 0.000000e+00 | 0.000000e+00 | 8.000000e+01 | 7.900010e+01 |    Inf |    3
+  0.5s|     1 |     2 |  14M|   0 |   0 | 100 | 6.971750e+01 | 7.076282e+01 | 7.014050e+01 | 8.000000e+01 | 7.900010e+01 |  14.06%|   64
+* 1.0s|    17 |    15 |  14M|  18 |   0 |   - | 7.700000e+01 | 7.344293e+01 | 7.122727e+01 | 7.700000e+01 | 7.600010e+01 |   8.10%|  188
+
+SCIP Status        : problem is solved [optimal solution found]
+Solving Time (sec) : 1.09
+Solving Nodes      : 54
+Primal Bound       : +7.70000000000000e+01 (229 solutions)
+Dual Bound         : +7.12272727272727e+01
+Gap                : 8.10 %
+
+Statistics
+==========
+
+SCIP Status        : problem is solved [optimal solution found]
+Total Time         :       1.09
+  solving          :       1.09
+  presolving       :       0.01 (included in solving)
+  reading          :       0.00
+  copying          :       0.00 (0 times copied the problem)
+Original Problem   :
+  Problem name     : /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input17.lp
+  Variables        : 100 (100 binary, 0 integer, 0 implicit integer, 0 continuous)
+  Constraints      : 758 initial, 758 maximal
+  Objective sense  : minimize
+Presolved Problem  :
+  Problem name     : t_/work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input17.lp
+  Variables        : 100 (100 binary, 0 integer, 0 implicit integer, 0 continuous)
+  Constraints      : 758 initial, 758 maximal
+B&B Tree           :
+  number of runs   :          1
+  nodes            :         54 (44 internal, 10 leaves)
+  feasible leaves  :          0
+  infeas. leaves   :          0
+  objective leaves :         10
+  nodes (total)    :         54 (44 internal, 10 leaves)
+  nodes left       :          0
+  max depth        :         16
+  max depth (total):         16
+  backtracks       :         21 (38.9%)
+  early backtracks :          0 (0.0%)
+  nodes exc. ref.  :          0 (0.0%)
+  delayed cutoffs  :          0
+  repropagations   :          0 (0 domain reductions, 0 cutoffs)
+  avg switch length:       3.26
+  switching time   :       0.00
+Root Node          :
+  First LP value   : +5.00000000000000e+01
+  First LP Iters   :        114
+  First LP Time    :       0.00
+  Final Dual Bound : +7.01404958677686e+01
+  Final Root Iters :       1865
+  Root LP Estimate : +8.02045598331917e+01
+Solution           :
+  Solutions found  :        229 (4 improvements)
+  First Solution   : +1.00000000000000e+02   (in run 1, after 0 nodes, 0.00 seconds, depth 0, found by <trivial>)
+  Gap First Sol.   :   infinite
+  Gap Last Sol.    :       8.10 %
+  Primal Bound     : +7.70000000000000e+01   (in run 1, after 17 nodes, 0.99 seconds, depth 18, found by <relaxation>)
+  Dual Bound       : +7.12272727272727e+01
+  Gap              :       8.10 %
+  Avg. Gap         :      14.54 % (15.85 primal-dual integral)
+input18.lp
+
+bin/scipdagger -n 200 -r 1 -s scip.set -f /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input18.lp -o /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input18.sol --nodepru oracle --nodesel oracle --nodeseltrj /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/mvc_0.25_cotrain_search_lp_0/train/input18.search.trj.0 --pscale 2 --sscale 2 --probfeats 
+include nodepru oracle
+include nodesel oracle
+
+read problem </work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input18.lp>
+============
+
+original problem has 100 variables (100 bin, 0 int, 0 impl, 0 cont) and 738 constraints
+
+solve problem
+=============
+
+unknown variable <#> in line 1 of solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input18.sol>
+  (further unknown variables are ignored)
+optimal solution from solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input18.sol> was read
+unknown variable <#> in line 1 of solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input18.sol>
+  (further unknown variables are ignored)
+optimal solution from solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input18.sol> was read
+presolving (2 rounds: 2 fast, 2 medium, 2 exhaustive):
+ 0 deleted vars, 0 deleted constraints, 0 added constraints, 0 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 738 cliques
+presolved problem has 100 variables (100 bin, 0 int, 0 impl, 0 cont) and 738 constraints
+storing VBC information in file </tmp/vbc.txt>
+
+ time | node  | left  | mem |depth|pdpt |frac |    lpobj     | avgdualbound |  dualbound   | primalbound  | cutoffbound  |  gap   |nsols
+k 0.0s|     1 |     0 |3075k|   2 |   0 |   - | 7.900000e+01 | 0.000000e+00 | 0.000000e+00 | 7.900000e+01 | 7.800010e+01 |    Inf |    2
+  0.4s|     1 |     2 |  16M|   0 |   0 | 100 | 6.938516e+01 | 7.031174e+01 | 6.987951e+01 | 7.900000e+01 | 7.800010e+01 |  13.05%|   52
+* 0.8s|    18 |    13 |  16M|  19 |   0 |   - | 7.600000e+01 | 7.294044e+01 | 7.069318e+01 | 7.600000e+01 | 7.500010e+01 |   7.51%|  184
+
+SCIP Status        : problem is solved [optimal solution found]
+Solving Time (sec) : 0.94
+Solving Nodes      : 47
+Primal Bound       : +7.60000000000000e+01 (208 solutions)
+Dual Bound         : +7.10833333333333e+01
+Gap                : 6.92 %
+
+Statistics
+==========
+
+SCIP Status        : problem is solved [optimal solution found]
+Total Time         :       0.94
+  solving          :       0.94
+  presolving       :       0.01 (included in solving)
+  reading          :       0.00
+  copying          :       0.00 (0 times copied the problem)
+Original Problem   :
+  Problem name     : /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input18.lp
+  Variables        : 100 (100 binary, 0 integer, 0 implicit integer, 0 continuous)
+  Constraints      : 738 initial, 738 maximal
+  Objective sense  : minimize
+Presolved Problem  :
+  Problem name     : t_/work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input18.lp
+  Variables        : 100 (100 binary, 0 integer, 0 implicit integer, 0 continuous)
+  Constraints      : 738 initial, 738 maximal
+B&B Tree           :
+  number of runs   :          1
+  nodes            :         47 (38 internal, 9 leaves)
+  feasible leaves  :          0
+  infeas. leaves   :          0
+  objective leaves :          9
+  nodes (total)    :         47 (38 internal, 9 leaves)
+  nodes left       :          0
+  max depth        :         17
+  max depth (total):         17
+  backtracks       :         17 (36.2%)
+  early backtracks :          0 (0.0%)
+  nodes exc. ref.  :          0 (0.0%)
+  delayed cutoffs  :          0
+  repropagations   :          0 (0 domain reductions, 0 cutoffs)
+  avg switch length:       3.11
+  switching time   :       0.00
+Root Node          :
+  First LP value   : +5.00000000000000e+01
+  First LP Iters   :        100
+  First LP Time    :       0.00
+  Final Dual Bound : +6.98795103092783e+01
+  Final Root Iters :       1572
+  Root LP Estimate : +7.91803593535327e+01
+Solution           :
+  Solutions found  :        208 (3 improvements)
+  First Solution   : +1.00000000000000e+02   (in run 1, after 0 nodes, 0.00 seconds, depth 0, found by <trivial>)
+  Gap First Sol.   :   infinite
+  Gap Last Sol.    :       7.51 %
+  Primal Bound     : +7.60000000000000e+01   (in run 1, after 18 nodes, 0.83 seconds, depth 19, found by <relaxation>)
+  Dual Bound       : +7.10833333333333e+01
+  Gap              :       6.92 %
+  Avg. Gap         :      13.66 % (12.84 primal-dual integral)
+input19.lp
+
+bin/scipdagger -n 200 -r 1 -s scip.set -f /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input19.lp -o /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input19.sol --nodepru oracle --nodesel oracle --nodeseltrj /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/mvc_0.25_cotrain_search_lp_0/train/input19.search.trj.0 --pscale 2 --sscale 2 --probfeats 
+include nodepru oracle
+include nodesel oracle
+
+read problem </work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input19.lp>
+============
+
+original problem has 100 variables (100 bin, 0 int, 0 impl, 0 cont) and 693 constraints
+
+solve problem
+=============
+
+unknown variable <#> in line 1 of solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input19.sol>
+  (further unknown variables are ignored)
+optimal solution from solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input19.sol> was read
+unknown variable <#> in line 1 of solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input19.sol>
+  (further unknown variables are ignored)
+optimal solution from solution file </work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//sol//train/mvc_0.25_cotrain_search_lp///input19.sol> was read
+presolving (2 rounds: 2 fast, 2 medium, 2 exhaustive):
+ 0 deleted vars, 0 deleted constraints, 0 added constraints, 0 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 693 cliques
+presolved problem has 100 variables (100 bin, 0 int, 0 impl, 0 cont) and 693 constraints
+storing VBC information in file </tmp/vbc.txt>
+
+ time | node  | left  | mem |depth|pdpt |frac |    lpobj     | avgdualbound |  dualbound   | primalbound  | cutoffbound  |  gap   |nsols
+k 0.0s|     1 |     0 |3051k|   2 |   0 |   - | 7.900000e+01 | 0.000000e+00 | 0.000000e+00 | 7.900000e+01 | 7.800010e+01 |    Inf |    2
+  0.5s|     1 |     2 |  17M|   0 |   0 |  99 | 6.827686e+01 | 6.937036e+01 | 6.868750e+01 | 7.900000e+01 | 7.800010e+01 |  15.01%|   60
+* 0.9s|    13 |     7 |  17M|  14 |   0 |   - | 7.400000e+01 | 7.177104e+01 | 6.892308e+01 | 7.400000e+01 | 7.300010e+01 |   7.37%|  191
+
+SCIP Status        : problem is solved [optimal solution found]
+Solving Time (sec) : 0.93
+Solving Nodes      : 20
+Primal Bound       : +7.40000000000000e+01 (194 solutions)
+Dual Bound         : +6.91115107913669e+01
+Gap                : 7.07 %
+
+Statistics
+==========
+
+SCIP Status        : problem is solved [optimal solution found]
+Total Time         :       0.93
+  solving          :       0.93
+  presolving       :       0.01 (included in solving)
+  reading          :       0.00
+  copying          :       0.00 (0 times copied the problem)
+Original Problem   :
+  Problem name     : /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input19.lp
+  Variables        : 100 (100 binary, 0 integer, 0 implicit integer, 0 continuous)
+  Constraints      : 693 initial, 693 maximal
+  Objective sense  : minimize
+Presolved Problem  :
+  Problem name     : t_/work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/input19.lp
+  Variables        : 100 (100 binary, 0 integer, 0 implicit integer, 0 continuous)
+  Constraints      : 693 initial, 693 maximal
+B&B Tree           :
+  number of runs   :          1
+  nodes            :         20 (15 internal, 5 leaves)
+  feasible leaves  :          0
+  infeas. leaves   :          0
+  objective leaves :          5
+  nodes (total)    :         20 (15 internal, 5 leaves)
+  nodes left       :          0
+  max depth        :         12
+  max depth (total):         12
+  backtracks       :          8 (40.0%)
+  early backtracks :          0 (0.0%)
+  nodes exc. ref.  :          0 (0.0%)
+  delayed cutoffs  :          0
+  repropagations   :          0 (0 domain reductions, 0 cutoffs)
+  avg switch length:       2.60
+  switching time   :       0.00
+Root Node          :
+  First LP value   : +5.00000000000000e+01
+  First LP Iters   :        101
+  First LP Time    :       0.00
+  Final Dual Bound : +6.86875000000000e+01
+  Final Root Iters :       1669
+  Root LP Estimate : +7.95749247093403e+01
+Solution           :
+  Solutions found  :        194 (3 improvements)
+  First Solution   : +1.00000000000000e+02   (in run 1, after 0 nodes, 0.00 seconds, depth 0, found by <trivial>)
+  Gap First Sol.   :   infinite
+  Gap Last Sol.    :       7.37 %
+  Primal Bound     : +7.40000000000000e+01   (in run 1, after 13 nodes, 0.87 seconds, depth 14, found by <relaxation>)
+  Dual Bound       : +6.91115107913669e+01
+  Gap              :       7.07 %
+  Avg. Gap         :      15.23 % (14.16 primal-dual integral)
+Training search policy 0 with neural networks
+python pyscripts/normdata.py --i /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/mvc_0.25_cotrain_search_lp_0/train/search.trj --o /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/mvc_0.25_cotrain_search_lp_0/train/search.trj.norm --n policy//work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/mvc_0.25_cotrain_search_lp_0/searchPolicy.0.norm.dat
+python pyscripts/normdata.py --i /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/mvc_0.25_cotrain_search_lp_0/valid/search.trj --o /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/mvc_0.25_cotrain_search_lp_0/valid/search.trj.norm --p policy//work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/mvc_0.25_cotrain_search_lp_0/searchPolicy.0.norm.dat
+python pyscripts/searchnet.py --v /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/mvc_0.25_cotrain_search_lp_0/valid/search.trj.norm --t /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/mvc_0.25_cotrain_search_lp_0/train/search.trj.norm --m policy//work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/mvc_0.25_cotrain_search_lp_0/searchPolicy.0_keras.h5 --w /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/mvc_0.25_cotrain_search_lp_0/train/search.trj.weight --x /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/mvc_0.25_cotrain_search_lp_0/valid/search.trj.weight
+Loading /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/mvc_0.25_cotrain_search_lp_0/train/search.trj.1
+Loading /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/mvc_0.25_cotrain_search_lp_0/train/search.trj.2
+Writing policy//work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/mvc_0.25_cotrain_search_lp_0/searchPolicy.0.norm.dat
+Writing /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/mvc_0.25_cotrain_search_lp_0/train/search.trj.norm.1
+Feat Length 18
+Writing /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/mvc_0.25_cotrain_search_lp_0/train/search.trj.norm.2
+Feat Length 18
+Loading /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/mvc_0.25_cotrain_search_lp_0/train/search.trj.weight
+Loading /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/mvc_0.25_cotrain_search_lp_0/train/search.trj.norm.1
+Loading /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/mvc_0.25_cotrain_search_lp_0/train/search.trj.norm.2
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, 18)           0                                            
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, 18)           0                                            
+__________________________________________________________________________________________________
+sequential_1 (Sequential)       (None, 1)            9601        input_1[0][0]                    
+                                                                 input_2[0][0]                    
+__________________________________________________________________________________________________
+lambda_1 (Lambda)               (None, 1)            0           sequential_1[2][0]               
+__________________________________________________________________________________________________
+add_1 (Add)                     (None, 1)            0           sequential_1[1][0]               
+                                                                 lambda_1[0][0]                   
+__________________________________________________________________________________________________
+activation_4 (Activation)       (None, 1)            0           add_1[0][0]                      
+==================================================================================================
+Total params: 9,601
+Trainable params: 9,601
+Non-trainable params: 0
+__________________________________________________________________________________________________
+###############################
+###############################
+###############################
+###############################
+Data size: 740
+
+Train on 592 samples, validate on 148 samples
+Epoch 1/1000
+
+128/592 [=====>........................] - ETA: 11s - loss: 1.4554 - acc: 0.3203
+592/592 [==============================] - 3s 5ms/step - loss: 0.9137 - acc: 0.7449 - val_loss: 0.4815 - val_acc: 0.8851
+Epoch 2/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.5108 - acc: 0.8906
+592/592 [==============================] - 0s 50us/step - loss: 0.4422 - acc: 0.8986 - val_loss: 0.4320 - val_acc: 0.8851
+Epoch 3/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.3822 - acc: 0.9297
+592/592 [==============================] - 0s 48us/step - loss: 0.4214 - acc: 0.9003 - val_loss: 0.4112 - val_acc: 0.8784
+Epoch 4/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.3776 - acc: 0.9219
+592/592 [==============================] - 0s 49us/step - loss: 0.3677 - acc: 0.9240 - val_loss: 0.4030 - val_acc: 0.8851
+Epoch 5/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.4824 - acc: 0.8906
+592/592 [==============================] - 0s 48us/step - loss: 0.3707 - acc: 0.9274 - val_loss: 0.3459 - val_acc: 0.9324
+Epoch 6/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.3601 - acc: 0.8984
+592/592 [==============================] - 0s 48us/step - loss: 0.3707 - acc: 0.9071 - val_loss: 0.3359 - val_acc: 0.9257
+Epoch 7/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.3250 - acc: 0.9297
+592/592 [==============================] - 0s 49us/step - loss: 0.3562 - acc: 0.9240 - val_loss: 0.3359 - val_acc: 0.9257
+Epoch 8/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.4791 - acc: 0.9062
+592/592 [==============================] - 0s 49us/step - loss: 0.3453 - acc: 0.9324 - val_loss: 0.3261 - val_acc: 0.9257
+Epoch 9/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.2833 - acc: 0.9375
+592/592 [==============================] - 0s 48us/step - loss: 0.3312 - acc: 0.9392 - val_loss: 0.3225 - val_acc: 0.9324
+Epoch 10/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.4205 - acc: 0.8750
+592/592 [==============================] - 0s 48us/step - loss: 0.3358 - acc: 0.9274 - val_loss: 0.3195 - val_acc: 0.9257
+Epoch 11/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.2869 - acc: 0.9531
+592/592 [==============================] - 0s 49us/step - loss: 0.3343 - acc: 0.9291 - val_loss: 0.3132 - val_acc: 0.9257
+Epoch 12/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.4599 - acc: 0.8828
+592/592 [==============================] - 0s 48us/step - loss: 0.3218 - acc: 0.9307 - val_loss: 0.3192 - val_acc: 0.9459
+Epoch 13/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.3346 - acc: 0.9141
+592/592 [==============================] - 0s 48us/step - loss: 0.3297 - acc: 0.9274 - val_loss: 0.3136 - val_acc: 0.9392
+Epoch 14/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.3043 - acc: 0.9375
+592/592 [==============================] - 0s 49us/step - loss: 0.3323 - acc: 0.9240 - val_loss: 0.3001 - val_acc: 0.9257
+Epoch 15/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.2926 - acc: 0.9453
+592/592 [==============================] - 0s 49us/step - loss: 0.2983 - acc: 0.9375 - val_loss: 0.2995 - val_acc: 0.9257
+Epoch 16/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.4271 - acc: 0.9219
+592/592 [==============================] - 0s 51us/step - loss: 0.3404 - acc: 0.9324 - val_loss: 0.2953 - val_acc: 0.9257
+Epoch 17/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.3161 - acc: 0.9375
+592/592 [==============================] - 0s 49us/step - loss: 0.3089 - acc: 0.9324 - val_loss: 0.3176 - val_acc: 0.9257
+Epoch 18/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.3394 - acc: 0.9219
+592/592 [==============================] - 0s 49us/step - loss: 0.2880 - acc: 0.9409 - val_loss: 0.3035 - val_acc: 0.9257
+Epoch 19/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.2205 - acc: 0.9766
+592/592 [==============================] - 0s 49us/step - loss: 0.2832 - acc: 0.9476 - val_loss: 0.2973 - val_acc: 0.9324
+Epoch 20/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.2216 - acc: 0.9609
+592/592 [==============================] - 0s 49us/step - loss: 0.2897 - acc: 0.9426 - val_loss: 0.2982 - val_acc: 0.9257
+Epoch 21/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.4168 - acc: 0.9297
+592/592 [==============================] - 0s 49us/step - loss: 0.2965 - acc: 0.9426 - val_loss: 0.2850 - val_acc: 0.9122
+Epoch 22/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.2771 - acc: 0.9297
+592/592 [==============================] - 0s 49us/step - loss: 0.2964 - acc: 0.9358 - val_loss: 0.2853 - val_acc: 0.9324
+Epoch 23/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.3052 - acc: 0.9531
+592/592 [==============================] - 0s 49us/step - loss: 0.2867 - acc: 0.9443 - val_loss: 0.2875 - val_acc: 0.9257
+Epoch 24/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.3945 - acc: 0.9219
+592/592 [==============================] - 0s 49us/step - loss: 0.2805 - acc: 0.9459 - val_loss: 0.2835 - val_acc: 0.9257
+Epoch 25/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.1875 - acc: 0.9766
+592/592 [==============================] - 0s 49us/step - loss: 0.2967 - acc: 0.9341 - val_loss: 0.2843 - val_acc: 0.9324
+Epoch 26/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.2903 - acc: 0.9375
+592/592 [==============================] - 0s 49us/step - loss: 0.2822 - acc: 0.9409 - val_loss: 0.2991 - val_acc: 0.9324
+Epoch 27/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.2834 - acc: 0.9609
+592/592 [==============================] - 0s 48us/step - loss: 0.2835 - acc: 0.9409 - val_loss: 0.2838 - val_acc: 0.9257
+Epoch 28/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.3698 - acc: 0.9375
+592/592 [==============================] - 0s 49us/step - loss: 0.2924 - acc: 0.9426 - val_loss: 0.2967 - val_acc: 0.9392
+Epoch 29/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.2687 - acc: 0.9453
+592/592 [==============================] - 0s 49us/step - loss: 0.2883 - acc: 0.9324 - val_loss: 0.2875 - val_acc: 0.9324
+Epoch 30/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.3811 - acc: 0.9141
+592/592 [==============================] - 0s 48us/step - loss: 0.2893 - acc: 0.9392 - val_loss: 0.2915 - val_acc: 0.9392
+Epoch 31/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.1945 - acc: 0.9766
+592/592 [==============================] - 0s 49us/step - loss: 0.2596 - acc: 0.9544 - val_loss: 0.2848 - val_acc: 0.9392
+Epoch 32/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.3678 - acc: 0.9297
+592/592 [==============================] - 0s 49us/step - loss: 0.2816 - acc: 0.9341 - val_loss: 0.2825 - val_acc: 0.9324
+Epoch 33/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.2480 - acc: 0.9609
+592/592 [==============================] - 0s 49us/step - loss: 0.2709 - acc: 0.9443 - val_loss: 0.2882 - val_acc: 0.9324
+Epoch 34/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.2678 - acc: 0.9297
+592/592 [==============================] - 0s 48us/step - loss: 0.2594 - acc: 0.9459 - val_loss: 0.2756 - val_acc: 0.9324
+Epoch 35/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.2375 - acc: 0.9453
+592/592 [==============================] - 0s 48us/step - loss: 0.2686 - acc: 0.9392 - val_loss: 0.2821 - val_acc: 0.9324
+Epoch 36/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.2841 - acc: 0.9375
+592/592 [==============================] - 0s 49us/step - loss: 0.2587 - acc: 0.9493 - val_loss: 0.2734 - val_acc: 0.9257
+Epoch 37/1000
+
+128/592 [=====>........................] - ETA: 0s - loss: 0.2824 - acc: 0.9297
+592/592 [==============================] - 0s 49us/step - loss: 0.2746 - acc: 0.9392 - val_loss: 0.2697 - val_acc: 0.9189
+
+128/740 [====>.........................] - ETA: 0s
+740/740 [==============================] - 0s 44us/step
+
+128/740 [====>.........................] - ETA: 0s
+740/740 [==============================] - 0s 7us/step
+Max: 1.969952 Min: -11.990510
+Input Dimension: 18
+Loading Model policy//work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/mvc_0.25_cotrain_search_lp_0/searchPolicy.0_keras_0.h5
+/home/05632/subrahma/latest/co-training/joint-pyscripts
+Running [0;31m SCIP on Unlabeled data [0m
+test data: /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/unlabeled
+experiment: mvc_0.25_cotrain_search_lp_0
+data suffix: .lp
+Results dir: /work/05632/subrahma//latest/co-training//scratch/
+search policy: ./policy//work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/mvc_0.25_cotrain_search_lp_0//searchPolicy.0_keras.json
+sel norm file: ./policy//work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/mvc_0.25_cotrain_search_lp_0//searchPolicy.0.norm.dat
+bin/scipdagger -n -r 1 -s scip.set -f /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/unlabeled/input30.lp --nodesel policy ./policy//work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/mvc_0.25_cotrain_search_lp_0//searchPolicy.0_keras.json --sol /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/unlabeled/mvc_0.25_cotrain_search_lp_0/input30.sol --snorm ./policy//work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/mvc_0.25_cotrain_search_lp_0//searchPolicy.0.norm.dat
+invalid parameter <1>
+
+syntax: bin/scipdagger [-l <logfile>] [-q] [-s <settings>] [-f <problem>] [-o <solution>]
+  -l <logfile>  : copy output into log file
+  -q            : suppress screen messages
+  -s <settings> : load parameter settings (.set) file
+  -f <problem>  : load and solve problem file
+  -o <solution> : load optimal solution file
+/work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/unlabeled/mvc_0.25_cotrain_search_lp_0/input30.log
+bin/scipdagger -n -r 1 -s scip.set -f /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/unlabeled/input31.lp --nodesel policy ./policy//work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/mvc_0.25_cotrain_search_lp_0//searchPolicy.0_keras.json --sol /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/unlabeled/mvc_0.25_cotrain_search_lp_0/input31.sol --snorm ./policy//work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/mvc_0.25_cotrain_search_lp_0//searchPolicy.0.norm.dat
+invalid parameter <1>
+
+syntax: bin/scipdagger [-l <logfile>] [-q] [-s <settings>] [-f <problem>] [-o <solution>]
+  -l <logfile>  : copy output into log file
+  -q            : suppress screen messages
+  -s <settings> : load parameter settings (.set) file
+  -f <problem>  : load and solve problem file
+  -o <solution> : load optimal solution file
+/work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/unlabeled/mvc_0.25_cotrain_search_lp_0/input31.log
+bin/scipdagger -n -r 1 -s scip.set -f /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/unlabeled/input32.lp --nodesel policy ./policy//work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/mvc_0.25_cotrain_search_lp_0//searchPolicy.0_keras.json --sol /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/unlabeled/mvc_0.25_cotrain_search_lp_0/input32.sol --snorm ./policy//work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/mvc_0.25_cotrain_search_lp_0//searchPolicy.0.norm.dat
+invalid parameter <1>
+
+syntax: bin/scipdagger [-l <logfile>] [-q] [-s <settings>] [-f <problem>] [-o <solution>]
+  -l <logfile>  : copy output into log file
+  -q            : suppress screen messages
+  -s <settings> : load parameter settings (.set) file
+  -f <problem>  : load and solve problem file
+  -o <solution> : load optimal solution file
+/work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/unlabeled/mvc_0.25_cotrain_search_lp_0/input32.log
+bin/scipdagger -n -r 1 -s scip.set -f /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/unlabeled/input33.lp --nodesel policy ./policy//work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/mvc_0.25_cotrain_search_lp_0//searchPolicy.0_keras.json --sol /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/unlabeled/mvc_0.25_cotrain_search_lp_0/input33.sol --snorm ./policy//work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/mvc_0.25_cotrain_search_lp_0//searchPolicy.0.norm.dat
+invalid parameter <1>
+
+syntax: bin/scipdagger [-l <logfile>] [-q] [-s <settings>] [-f <problem>] [-o <solution>]
+  -l <logfile>  : copy output into log file
+  -q            : suppress screen messages
+  -s <settings> : load parameter settings (.set) file
+  -f <problem>  : load and solve problem file
+  -o <solution> : load optimal solution file
+/work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/unlabeled/mvc_0.25_cotrain_search_lp_0/input33.log
+bin/scipdagger -n -r 1 -s scip.set -f /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/unlabeled/input34.lp --nodesel policy ./policy//work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/mvc_0.25_cotrain_search_lp_0//searchPolicy.0_keras.json --sol /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/unlabeled/mvc_0.25_cotrain_search_lp_0/input34.sol --snorm ./policy//work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/mvc_0.25_cotrain_search_lp_0//searchPolicy.0.norm.dat
+invalid parameter <1>
+
+syntax: bin/scipdagger [-l <logfile>] [-q] [-s <settings>] [-f <problem>] [-o <solution>]
+  -l <logfile>  : copy output into log file
+  -q            : suppress screen messages
+  -s <settings> : load parameter settings (.set) file
+  -f <problem>  : load and solve problem file
+  -o <solution> : load optimal solution file
+/work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/unlabeled/mvc_0.25_cotrain_search_lp_0/input34.log
+bin/scipdagger -n -r 1 -s scip.set -f /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/unlabeled/input35.lp --nodesel policy ./policy//work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/mvc_0.25_cotrain_search_lp_0//searchPolicy.0_keras.json --sol /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/unlabeled/mvc_0.25_cotrain_search_lp_0/input35.sol --snorm ./policy//work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/mvc_0.25_cotrain_search_lp_0//searchPolicy.0.norm.dat
+invalid parameter <1>
+
+syntax: bin/scipdagger [-l <logfile>] [-q] [-s <settings>] [-f <problem>] [-o <solution>]
+  -l <logfile>  : copy output into log file
+  -q            : suppress screen messages
+  -s <settings> : load parameter settings (.set) file
+  -f <problem>  : load and solve problem file
+  -o <solution> : load optimal solution file
+/work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/unlabeled/mvc_0.25_cotrain_search_lp_0/input35.log
+bin/scipdagger -n -r 1 -s scip.set -f /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/unlabeled/input36.lp --nodesel policy ./policy//work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/mvc_0.25_cotrain_search_lp_0//searchPolicy.0_keras.json --sol /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/unlabeled/mvc_0.25_cotrain_search_lp_0/input36.sol --snorm ./policy//work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/mvc_0.25_cotrain_search_lp_0//searchPolicy.0.norm.dat
+invalid parameter <1>
+
+syntax: bin/scipdagger [-l <logfile>] [-q] [-s <settings>] [-f <problem>] [-o <solution>]
+  -l <logfile>  : copy output into log file
+  -q            : suppress screen messages
+  -s <settings> : load parameter settings (.set) file
+  -f <problem>  : load and solve problem file
+  -o <solution> : load optimal solution file
+/work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/unlabeled/mvc_0.25_cotrain_search_lp_0/input36.log
+bin/scipdagger -n -r 1 -s scip.set -f /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/unlabeled/input37.lp --nodesel policy ./policy//work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/mvc_0.25_cotrain_search_lp_0//searchPolicy.0_keras.json --sol /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/unlabeled/mvc_0.25_cotrain_search_lp_0/input37.sol --snorm ./policy//work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/mvc_0.25_cotrain_search_lp_0//searchPolicy.0.norm.dat
+invalid parameter <1>
+
+syntax: bin/scipdagger [-l <logfile>] [-q] [-s <settings>] [-f <problem>] [-o <solution>]
+  -l <logfile>  : copy output into log file
+  -q            : suppress screen messages
+  -s <settings> : load parameter settings (.set) file
+  -f <problem>  : load and solve problem file
+  -o <solution> : load optimal solution file
+/work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/unlabeled/mvc_0.25_cotrain_search_lp_0/input37.log
+bin/scipdagger -n -r 1 -s scip.set -f /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/unlabeled/input38.lp --nodesel policy ./policy//work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/mvc_0.25_cotrain_search_lp_0//searchPolicy.0_keras.json --sol /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/unlabeled/mvc_0.25_cotrain_search_lp_0/input38.sol --snorm ./policy//work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/mvc_0.25_cotrain_search_lp_0//searchPolicy.0.norm.dat
+invalid parameter <1>
+
+syntax: bin/scipdagger [-l <logfile>] [-q] [-s <settings>] [-f <problem>] [-o <solution>]
+  -l <logfile>  : copy output into log file
+  -q            : suppress screen messages
+  -s <settings> : load parameter settings (.set) file
+  -f <problem>  : load and solve problem file
+  -o <solution> : load optimal solution file
+/work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/unlabeled/mvc_0.25_cotrain_search_lp_0/input38.log
+bin/scipdagger -n -r 1 -s scip.set -f /work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/unlabeled/input39.lp --nodesel policy ./policy//work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/mvc_0.25_cotrain_search_lp_0//searchPolicy.0_keras.json --sol /work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/unlabeled/mvc_0.25_cotrain_search_lp_0/input39.sol --snorm ./policy//work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/train/mvc_0.25_cotrain_search_lp_0//searchPolicy.0.norm.dat
+invalid parameter <1>
+
+syntax: bin/scipdagger [-l <logfile>] [-q] [-s <settings>] [-f <problem>] [-o <solution>]
+  -l <logfile>  : copy output into log file
+  -q            : suppress screen messages
+  -s <settings> : load parameter settings (.set) file
+  -f <problem>  : load and solve problem file
+  -o <solution> : load optimal solution file
+/work/05632/subrahma//latest/co-training//scratch///work/05632/subrahma//latest/co-training//data//mvc_test//lpfiles/unlabeled/mvc_0.25_cotrain_search_lp_0/input39.log
+/work/05632/subrahma//latest/co-training//data//mvc_test//gpickle/ 1 mvc_0.25_cotrain_search_gpickle .gpickle gpickle 0
+/work/05632/subrahma//latest/co-training//data//mvc_test//gpickle/unlabeled/ ./policy//work/05632/subrahma//latest/co-training//data//mvc_test//gpickle/train/mvc_0.25_cotrain_search_gpickle_0/ /work/05632/subrahma//latest/co-training//scratch/ mvc_0.25_cotrain_search_gpickle_0 0 .gpickle

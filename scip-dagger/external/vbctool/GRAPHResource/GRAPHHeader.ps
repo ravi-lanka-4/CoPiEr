@@ -1,0 +1,232 @@
+% change the colour brighter (colorfactor > 1.0)
+% or darker (colorfactor < 1.0)
+/colorfactor 1.0 def
+
+% setcolor
+/setcolor
+{
+   redarray context get
+   colorfactor mul
+   greenarray context get
+   colorfactor mul
+   bluearray context get
+   colorfactor mul
+   setrgbcolor
+} def
+
+% sets the current Contextvalues
+/setcontext
+{
+   /context exch def
+
+   setcolor
+
+   linewidtharray context get
+   /linewidth exch def
+   linestylearray context get
+   /linestyle exch def
+   capstylearray context get
+   /capstyle exch def
+   joinstylearray context get
+   /joinstyle exch def
+
+   % set the current linewidth
+   linewidth setlinewidth
+
+} def
+
+
+% draw a line
+/line
+{
+   setcontext
+   /y2 exch def
+   /x2 exch def
+   /y1 exch def
+   /x1 exch def
+   newpath
+   x1 y1 moveto
+   x2 y2 lineto
+   closepath
+   stroke
+} def
+
+% path for a circle
+/pathcircle
+{
+   /rad exch def
+   /y exch def
+   /x exch def
+   newpath
+   x rad add y moveto
+   x y rad 0 360 arc
+   closepath
+} def
+
+% draw a circle
+/circle
+{
+   setcontext
+   pathcircle
+   stroke
+} def
+
+% draw a filled circle
+/fillcircle
+{
+   setcontext
+   pathcircle
+   fill
+} def
+
+% path for a rect
+/pathrect
+{
+   /height exch def
+   /width  exch def
+   /y      exch def
+   /x      exch def
+   newpath
+   x y moveto
+   width 0 rlineto
+   0 height rlineto
+   width neg 0 rlineto
+   closepath
+} def
+
+% draw a rectangle
+/rectangle
+{
+   setcontext
+
+%  rectstroke
+   pathrect
+   stroke
+} def
+
+% draw a filled rectangle
+/fillrectangle
+{
+   setcontext
+
+%  rectfill
+   pathrect
+   fill
+} def
+
+% draw a String
+/drawstring
+{
+   setcontext
+
+   % set the current Fontheight
+   /dy exch def
+   dy
+
+   % set the current font
+   fontarray context get
+   exch
+   scalefont
+   setfont
+
+   % set the variables
+   /pos exch def
+   /h   exch def
+   /w   exch def
+   /y   exch def
+   /x   exch def
+   /str exch def
+
+   % calculates a BoundingBox around the String
+   newpath
+   0 0 moveto
+   str false charpath flattenpath
+   closepath
+   pathbbox
+
+   % set these values
+   /notused exch def
+   /dx exch def
+   /notused exch def
+   /notused exch def
+
+   pos 2 eq
+   {
+      w dx sub
+      2 div
+      x add
+      /x exch def
+   } if
+
+   pos 3 eq
+   {
+      w dx sub
+      x add
+      /x exch def
+   } if
+
+   pos 4 eq
+   {
+      h dy sub
+      2 div
+      y add
+      /y exch def
+   } if
+
+   pos 5 eq
+   {
+      h dy sub
+      2 div
+      y add
+      /y exch def
+      w dx sub
+      2 div
+      x add
+      /x exch def
+   } if
+
+   pos 6 eq
+   {
+      h dy sub
+      2 div
+      y add
+      /y exch def
+      w dx sub
+      x add
+      /x exch def
+   } if
+
+   pos 7 eq
+   {
+      h dy sub
+      y add
+      /y exch def
+   } if
+
+   pos 8 eq
+   {
+      h dy sub
+      y add
+      /y exch def
+      w dx sub
+      2 div
+      x add
+      /x exch def
+   } if
+
+   pos 9 eq
+   {
+      h dy sub
+      y add
+      /y exch def
+      w dx sub
+      x add
+      /x exch def
+   } if
+
+   x y moveto
+   str show
+} def
+
+% End of Header
+
