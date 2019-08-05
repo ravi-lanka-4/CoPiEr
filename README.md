@@ -31,9 +31,9 @@ Next install scip-dagger:
 
 Now define there macros in your ~/.bashrc:
 '''
-  - export COTRAIN_HOME=<path to local copier folder>
-  - export COTRAIN_DATA=<path to data>
-  - export COTRAIN_SCATCH=<path to scratch folder>
+  - export COTRAIN_HOME=\<path to local copier folder\>
+  - export COTRAIN_DATA=\<path to data\>
+  - export COTRAIN_SCATCH=\<path to scratch folder\>
   - (optional) export PYTHONDONTWRITEBYTECODE=1 
 '''
 
