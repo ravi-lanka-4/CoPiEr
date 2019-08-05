@@ -6,7 +6,7 @@ Install scip-4.0.1-affected (in dep/ subfolder):
  - [Optional] (If using open source solver:) https://projects.coin-or.org/Clp
  - [Optional] Use SoPlex; so much faster than Clp
  - Use gurobi-7.4 version
- - Make command: make OPT=opt ZIMPL=false LPS=grb (or) make OPT=opt ZIMPL=false LPS=cld [for clp solver]
+ - Make command: make OPT=opt ZIMPL=false LPS=grb (or) make OPT=opt ZIMPL=false LPS=clp [for clp solver]
 
 Install:
  - Install https://github.com/Reference-LAPACK/lapack
