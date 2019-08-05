@@ -5,6 +5,7 @@ Step 1: Follow the instructions in the graphnn github
 Step 2: Install scip-4.0.1-affected (in dep/ subfolder):
  - [Optional] (If using open source solver:) https://projects.coin-or.org/Clp
  - [Optional] Use SoPlex; so much faster than Clp
+ - Update the LDFLAGS to the relevant LP solvers include and library paths in make/make.project
  - Use gurobi-7.4 version
  - Make command: make OPT=opt ZIMPL=false LPS=grb (or) make OPT=opt ZIMPL=false LPS=clp [for clp solver]
 
