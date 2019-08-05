@@ -10,7 +10,7 @@ Install scip-4.0.1-affected (in dep/ subfolder):
 
 Install:
  - Install https://github.com/Reference-LAPACK/lapack
- - Be cautious: It has several dependencies. Make sure you use the same compiler (gcc/g++-4.9) for the all the dependency packages.
+ - Remember: It has several dependencies. Make sure you use the same compiler (gcc/g++-4.9) for the all the dependency packages.
 
 Next install scip-dagger:
  - Install co-training/scip-dagger
