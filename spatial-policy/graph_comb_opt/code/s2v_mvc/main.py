@@ -2,6 +2,7 @@ from __future__ import division
 import numpy as np
 import networkx as nx
 import cPickle as cp
+#import _pickle as cp
 import random
 import ctypes
 import os
@@ -16,6 +17,10 @@ from mvc_lib import MvcLib
 #faulthandler.enable()
 
 def readOpt(solF):
+    if not os.path.isfile(solF):
+      print('Missing:' + os.path.basename(solF))
+      raise Exception('Missing solution file')
+
     # Read optimal solution file
     opt = []
     with open(solF, 'r') as F:
@@ -46,7 +51,7 @@ def readOpt(solF):
     return opt
 
 def sup_gen_new_graphs(opt, prob=0.5, clear=False):
-    print 'generating new training graphs'
+    print('generating new training graphs')
     sys.stdout.flush()
     if clear:
       print('Clearning supervised data points')
@@ -57,6 +62,7 @@ def sup_gen_new_graphs(opt, prob=0.5, clear=False):
 
     for cF in glob.glob(dataF + '/*gpickle'):
         try:
+          # This part of the code only inserts graphs that have a solution
           with open(cF, 'rb') as F:
               g = pickle.load(F)
 
@@ -65,13 +71,13 @@ def sup_gen_new_graphs(opt, prob=0.5, clear=False):
           optSol = readOpt(solF)
           api.InsertGraph(g, False, optSol, prob)
         except:
-          #print('Sol file missing: %s; skipping'%solF)
+          print('skipping %s'%solF)
           pass
 
     return
 
 def gen_new_graphs(opt, clear=False):
-    print 'generating new training graphs'
+    print('generating new training graphs')
     sys.stdout.flush()
     if clear:
       print('Clearning data points')
@@ -87,7 +93,7 @@ def gen_new_graphs(opt, clear=False):
     return
 
 def PrepareValidData(opt):
-    print 'generating validation graphs'
+    print('generating validation graphs')
     sys.stdout.flush()
     dataF = opt['validF']
     n_valid = 0
@@ -104,19 +110,19 @@ def find_model_file(opt):
     min_n = int(opt['min_n'])
     log_file = None
     if max_n < 100:
-	return None
+      return None
     if min_n == 50 and max_n == 100:
-        return None
+      return None
     elif min_n == 100 and max_n == 200:
-        n1 = 50
-        n2 = 100
+      n1 = 50
+      n2 = 100
     else:
-        n1 = min_n - 100
-        n2 = max_n - 100
+      n1 = min_n - 100
+      n2 = max_n - 100
 
     log_file = '%s/log-%d-%d.txt' % (opt['save_dir'], n1, n2)
     if not os.path.isfile(log_file):
-	return None
+        return None
     best_r = -1000000
     best_it = -1
     with open(log_file, 'r') as f:
@@ -129,8 +135,8 @@ def find_model_file(opt):
                     best_r = r
                     best_it = it
     if best_it < 0:
-        return None
-    print best_it, best_r
+      return None
+    print(best_it, best_r)
     return '%s/nrange_%d_%d_iter_%d.model' % (opt['save_dir'], n1, n2, best_it)
     
 if __name__ == '__main__':
@@ -142,7 +148,7 @@ if __name__ == '__main__':
 
     model_file=opt['modelF']
     if os.path.isfile(model_file) and (int(opt['citer']) != 0):
-        print 'loading', model_file
+        print('loading', model_file)
         sys.stdout.flush()
         api.LoadModel(model_file)
 
@@ -180,7 +186,7 @@ if __name__ == '__main__':
             frac = 0.0
             for idx in range(n_valid):
                 frac += api.lib.Test(idx)
-            print 'iter', iter , 'eps', eps, 'average size of vc: ', frac / n_valid
+            print('iter', iter , 'eps', eps, 'average size of vc: ', frac / n_valid)
             sys.stdout.flush()
 
         if iter == 0:
@@ -210,7 +216,7 @@ if __name__ == '__main__':
             frac = 0.0
             for idx in range(n_valid):
                 frac += api.lib.Test(idx)
-            print 'iter', iter , 'eps', eps, 'average size of vc: ', frac / n_valid
+            print('iter', iter , 'eps', eps, 'average size of vc: ', frac / n_valid)
             sys.stdout.flush()
 
         if iter == 0:
@@ -244,7 +250,7 @@ if __name__ == '__main__':
             frac = 0.0
             for idx in range(n_valid):
                 frac += api.lib.Test(idx)
-            print 'iter', iter + int(opt['citer']), 'eps', eps, 'average size of vc: ', frac / n_valid
+            print('iter', iter + int(opt['citer']), 'eps', eps, 'average size of vc: ', frac / n_valid)
             sys.stdout.flush()
             model_path = '%s/nrange_%d_iter_%d.model' % (opt['save_dir'], int(opt['citer']), iter)
             api.SaveModel(model_path)
@@ -261,7 +267,7 @@ if __name__ == '__main__':
     frac = 0.0
     for idx in range(n_valid):
         frac += api.lib.Test(idx)
-    print 'iter', iter + int(opt['citer']), 'eps', eps, 'average size of vc: ', frac / n_valid
+    print('iter', iter + int(opt['citer']), 'eps', eps, 'average size of vc: ', frac / n_valid)
     sys.stdout.flush()
     model_path = '%s/nrange_%d_iter_%d.model' % (opt['save_dir'], int(opt['citer']), iter)
     api.SaveModel(model_path)

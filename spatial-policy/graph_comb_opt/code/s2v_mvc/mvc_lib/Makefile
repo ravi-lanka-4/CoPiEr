@@ -8,7 +8,8 @@ gnn_lib = $(lib_dir)/libgnn.a
 include_dirs = $(CUDA_HOME)/include/ include/ $(GNN_HOME)/include/
 
 CXXFLAGS += $(addprefix -I,$(include_dirs)) -Wno-unused-local-typedef
-CXXFLAGS += -fPIC -DUSE_GPU 
+#CXXFLAGS += -fPIC -DUSE_GPU 
+CXXFLAGS += -fPIC 
 CXXFLAGS += -DGPU_MODE
 cpp_files = $(shell $(FIND) src/lib -name "*.cpp" -printf "%P\n")
 cxx_obj_files = $(subst .cpp,.o,$(cpp_files))
@@ -25,7 +26,7 @@ all: $(target)
 
 build/dll/libmvc.so : src/mvc_lib.cpp $(gnn_lib) $(objs)
 	$(dir_guard)
-	$(CXX) -shared $(CXXFLAGS) -MMD -o $@ $(filter %.cpp %.o, $^) -L/opt/intel/mkl/lib/intel64/ -L$(TBB_LIBRARY_RELEASE) -L$(lib_dir) -lgnn $(LDFLAGS)
+	$(CXX) -shared $(CXXFLAGS) -MMD -o $@ $(filter %.cpp %.o, $^) -lcblas -lm -L$(TBB_LIBRARY_RELEASE) -L$(lib_dir) -lgnn $(LDFLAGS)
 
 DEPS += $(target_dep)
 

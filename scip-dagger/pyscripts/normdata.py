@@ -8,7 +8,7 @@ warnings.filterwarnings("ignore",category=DeprecationWarning)
 
 def writeCSV(data, normF):
   print('Writing %s'%normF)
-  with open(normF, "wb") as csv_file:
+  with open(normF, "w") as csv_file:
       writer = csv.writer(csv_file, delimiter=',')
       for line in data:
          writer.writerow(line)

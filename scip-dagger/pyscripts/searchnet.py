@@ -104,7 +104,7 @@ def load_svmlight(fname):
 def load_weight(fname):
   print('Loading %s'%fname)
   weight = []
-  with open(fname, 'rb') as csvfile:
+  with open(fname, 'r') as csvfile:
      spamreader = csv.reader(csvfile, delimiter='\n')
      for row in spamreader:
          weight.append(float(row[0]))

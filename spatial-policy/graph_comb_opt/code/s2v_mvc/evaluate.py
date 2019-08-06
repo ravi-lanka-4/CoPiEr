@@ -1,6 +1,7 @@
 import numpy as np
 import networkx as nx
 import cPickle as cp
+#import _pickle as cp
 import pickle
 import random
 import ctypes
@@ -21,7 +22,7 @@ if __name__ == '__main__':
 
     model_file = opt['modelF']
     assert model_file is not None
-    print 'loading', model_file
+    print('loading', model_file)
     sys.stdout.flush()
     api.LoadModel(model_file)
 
