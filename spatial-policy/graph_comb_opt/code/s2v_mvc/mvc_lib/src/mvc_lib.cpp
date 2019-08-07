@@ -12,6 +12,7 @@
 #include <signal.h>
 
 using namespace gnn;
+using namespace std;
 
 void intHandler(int dummy) {
     exit(0);
@@ -36,10 +37,9 @@ MvcEnv* test_env;
 int Init(const int argc, const char** argv)
 {
     signal(SIGINT, intHandler);
-    
+   
     cfg::LoadParams(argc, argv);
     GpuHandle::Init(cfg::dev_id, 1);
-
     net = new QNet();    
     net->BuildNet();
 

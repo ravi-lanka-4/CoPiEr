@@ -33,7 +33,7 @@ def write_floats(file, floats):
     assert written == len(floats)
 
 def export_model(model, filename):
-    with open(filename, 'w') as f:
+    with open(filename, 'wb') as f:
 
         def write_activation(activation):
             if activation == 'linear':

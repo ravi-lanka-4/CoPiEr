@@ -32,7 +32,7 @@ def readSols(src):
 def main(src1, src2, dst, threshold):
   objSrc1 = readSols(src1)
   objSrc2 = readSols(src2)
-  allF = np.unique(objSrc1.keys() + objSrc2.keys())
+  allF = np.unique(list(objSrc1.keys()) + list(objSrc2.keys()))
   os.system('mkdir -p %s'%dst)
 
   for cF in allF:

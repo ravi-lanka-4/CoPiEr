@@ -18,7 +18,7 @@ def readCSV(normInpF):
   norm_min = []
   norm_max = []
   print('Reading %s'%normInpF)
-  with open(normInpF, "rb") as csv_file:
+  with open(normInpF, "r") as csv_file:
       reader = csv.reader(csv_file, delimiter=',')
       for line in reader:
          norm_min.append(float(line[0]))

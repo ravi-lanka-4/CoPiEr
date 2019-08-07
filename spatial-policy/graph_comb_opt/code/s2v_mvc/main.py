@@ -1,8 +1,8 @@
 from __future__ import division
 import numpy as np
 import networkx as nx
-import cPickle as cp
-#import _pickle as cp
+#import cPickle as cp
+import _pickle as cp
 import random
 import ctypes
 import os

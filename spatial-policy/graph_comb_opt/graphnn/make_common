@@ -1,7 +1,7 @@
 dir_guard = @mkdir -p $(@D)
 
 TBB_ROOT = /work/05632/subrahma/.local/include/
-USE_GPU = 0
+USE_GPU = 1
 
 FIND := find
 CXX := icc

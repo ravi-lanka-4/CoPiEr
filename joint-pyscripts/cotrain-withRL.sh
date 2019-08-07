@@ -434,55 +434,53 @@ if [ "$train" = true ]; then
     softlink $data "gpickle" $gexp $i
 
     # ## Run branch and bound for linear programming formuulation
-    #time learn_bnb $data "lpfiles" ".lp" $lpexp $i $LPCOUNT
+    time learn_bnb $data "lpfiles" ".lp" $lpexp $i $LPCOUNT
 
     #### Run Sparial policy 
     time learn_spatial $data "gpickle" ".gpickle" $gexp $i $cost $decay $SPATIAL_ITER
+    
+    for (( j=$init; j<$i+1; j=$j+1)); do
+      # Current iteration data
+      iterlpexp="$lpexp"_"$j"
+      itergexp="$gexp"_"$j"
 
-    exit
+      ## Quadratic solution to lp solution
+      gpickleFolder=$data/"gpickle/unlabeled"$j/
+      lpFolder=$data/"lpfiles/unlabeled"$j/
 
-    #for (( j=$init; j<$i+1; j=$j+1)); do
-    #  # Current iteration data
-    #  iterlpexp="$lpexp"_"$j"
-    #  itergexp="$gexp"_"$j"
+      if [ "$self_imit" -gt "0" ]; then
+        # Co-training
 
-    #  ## Quadratic solution to lp solution
-    #  gpickleFolder=$data/"gpickle/unlabeled"$j/
-    #  lpFolder=$data/"lpfiles/unlabeled"$j/
+        # BnB to spatial
+        `rm -R -f $COTRAIN_SCRATCH/$gpickleFolder/$iterlpexp/`
+        mkdir -p $COTRAIN_SCRATCH/$gpickleFolder/$iterlpexp/
+        cp -al $COTRAIN_SCRATCH/$lpFolder/$iterlpexp/ $COTRAIN_SCRATCH/$gpickleFolder/
 
-    #  if [ "$self_imit" -gt "0" ]; then
-    #    # Co-training
+        ## Spatial to BnB
+        `rm -R -f $COTRAIN_SCRATCH/$lpFolder/$itergexp/`
+        mkdir -p $COTRAIN_SCRATCH/$lpFolder/$itergexp/
+        cp -al $COTRAIN_SCRATCH/$gpickleFolder/$itergexp/ $COTRAIN_SCRATCH/$lpFolder/
 
-    #    # BnB to spatial
-    #    `rm -R -f $COTRAIN_SCRATCH/$gpickleFolder/$iterlpexp/`
-    #    mkdir -p $COTRAIN_SCRATCH/$gpickleFolder/$iterlpexp/
-    #    cp -al $COTRAIN_SCRATCH/$lpFolder/$iterlpexp/ $COTRAIN_SCRATCH/$gpickleFolder/
+      elif [ "$self_imit" -lt "0" ]; then
 
-    #    ## Spatial to BnB
-    #    `rm -R -f $COTRAIN_SCRATCH/$lpFolder/$itergexp/`
-    #    mkdir -p $COTRAIN_SCRATCH/$lpFolder/$itergexp/
-    #    cp -al $COTRAIN_SCRATCH/$gpickleFolder/$itergexp/ $COTRAIN_SCRATCH/$lpFolder/
+        # BnB to spatial
+        `rm -R -f $COTRAIN_SCRATCH/$gpickleFolder/$iterlpexp/`
+        mkdir -p $COTRAIN_SCRATCH/$gpickleFolder/$iterlpexp/
+        cp -al $COTRAIN_SCRATCH/$lpFolder/$iterlpexp/ $COTRAIN_SCRATCH/$gpickleFolder/
+      fi
 
-    #  elif [ "$self_imit" -lt "0" ]; then
+      # compare and destination 
+      lpOut=$COTRAIN_SCRATCH/$data"/sol/train/"$lpexp/
+      gOut=$COTRAIN_SCRATCH/$data"/sol/train/"$gexp/
 
-    #    # BnB to spatial
-    #    `rm -R -f $COTRAIN_SCRATCH/$gpickleFolder/$iterlpexp/`
-    #    mkdir -p $COTRAIN_SCRATCH/$gpickleFolder/$iterlpexp/
-    #    cp -al $COTRAIN_SCRATCH/$lpFolder/$iterlpexp/ $COTRAIN_SCRATCH/$gpickleFolder/
-    #  fi
+      python joint-pyscripts/cmp_sols.py --s1 $COTRAIN_SCRATCH/$lpFolder/$iterlpexp/ \
+                                         --s2 $COTRAIN_SCRATCH/$lpFolder/$itergexp/  \
+                                         --d $lpOut --t 0
+      python joint-pyscripts/cmp_sols.py --s1 $COTRAIN_SCRATCH/$gpickleFolder/$itergexp/ \
+                                         --s2 $COTRAIN_SCRATCH/$gpickleFolder/$iterlpexp/ \
+                                         --d $gOut --t 0
 
-    #  # compare and destination 
-    #  lpOut=$COTRAIN_SCRATCH/$data"/sol/train/"$lpexp/
-    #  gOut=$COTRAIN_SCRATCH/$data"/sol/train/"$gexp/
-
-    #  python joint-pyscripts/cmp_sols.py --s1 $COTRAIN_SCRATCH/$lpFolder/$iterlpexp/ \
-    #                                     --s2 $COTRAIN_SCRATCH/$lpFolder/$itergexp/  \
-    #                                     --d $lpOut --t 0
-    #  python joint-pyscripts/cmp_sols.py --s1 $COTRAIN_SCRATCH/$gpickleFolder/$itergexp/ \
-    #                                     --s2 $COTRAIN_SCRATCH/$gpickleFolder/$iterlpexp/ \
-    #                                     --d $gOut --t 0
-
-    #done
+    done
   done
 
   # Now save them for the future

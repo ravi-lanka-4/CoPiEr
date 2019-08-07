@@ -3,8 +3,6 @@
 #include "tensor/cpu_dense_tensor.h"
 #include <cassert>
 
-using namespace std;
-
 namespace gnn
 {
 
@@ -24,7 +22,6 @@ void Tensor::Serialize(FILE* fid)
 void Tensor::Deserialize(FILE* fid)
 {
 	size_t len;
-        cout << fread(&len, sizeof(size_t), 1, fid) << endl;
 	assert(fread(&len, sizeof(size_t), 1, fid) == 1);
 	std::vector<size_t> dims(len);
 	assert(fread(dims.data(), sizeof(size_t), len, fid) == len);	

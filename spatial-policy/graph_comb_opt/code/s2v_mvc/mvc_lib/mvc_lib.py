@@ -14,6 +14,7 @@ class MvcLib(object):
         self.lib.Test.restype = ctypes.c_double
         self.lib.GetSol.restype = ctypes.c_double
         arr = (ctypes.c_char_p * len(inp))()
+        #arr[:] = args
         for j, val in enumerate(inp):
           arr[j] = val.encode('utf-8')
         self.lib.Init(len(inp), arr)
@@ -67,11 +68,13 @@ class MvcLib(object):
 
     
     def LoadModel(self, path_to_model):
-        p = ctypes.cast(path_to_model, ctypes.c_char_p)
+        p = ctypes.cast(path_to_model.encode('utf-8'), ctypes.c_char_p)
+        #p = ctypes.cast(path_to_model, ctypes.c_char_p)
         self.lib.LoadModel(p)
 
     def SaveModel(self, path_to_model):
-        p = ctypes.cast(path_to_model, ctypes.c_char_p)
+        p = ctypes.cast(path_to_model.encode('utf-8'), ctypes.c_char_p)
+        #p = ctypes.cast(path_to_model, ctypes.c_char_p)
         self.lib.SaveModel(p)
 
     def GetSol(self, gid, maxn):

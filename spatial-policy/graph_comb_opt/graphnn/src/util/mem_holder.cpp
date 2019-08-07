@@ -9,6 +9,8 @@
 #include <cuda_runtime.h>
 #endif
 
+using namespace std;
+
 namespace gnn
 {
 
