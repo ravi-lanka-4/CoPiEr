@@ -1,7 +1,7 @@
 # CoPiEr
 Implementation of "Co-training for Policy Learning" (https://arxiv.org/abs/1907.04484)
 
-# Instructions for installation
+# Installation
 Step by step instructions for installation of the software package in INSTALL.md
 
 # Reference
