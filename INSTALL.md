@@ -1,4 +1,6 @@
-Step 1: Follow the instructions in the graphnn github
+#Step 1
+
+Follow the instructions in the graphnn github
  - cd spatial-policy/graph_comb_opt/
  - export GNN_HOME= \<path to COTRAIN_HOME\spatial-policy/graph_comb_opt/graphnn\>
  - Follow the instructions to install Graphnn and mvc_lib : https://github.com/Hanjun-Dai/graphnn
