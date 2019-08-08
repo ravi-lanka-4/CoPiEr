@@ -1,6 +1,4 @@
-#Step 1
-
-Follow the instructions in the graphnn github
+Step 1: Follow the instructions in the graphnn github
  - cd spatial-policy/graph_comb_opt/
  - export GNN_HOME= \<path to COTRAIN_HOME\spatial-policy/graph_comb_opt/graphnn\>
  - Follow the instructions to install Graphnn and mvc_lib : https://github.com/Hanjun-Dai/graphnn
@@ -43,4 +41,5 @@ Step 6: Define macros in your ~/.bashrc (and remember to restart your terminal) 
 For training:
   - cd $COTRAIN_HOME
   - Arguments for run-mvc: <data_folder> <exp_id> <#nodes on branch and bound> <#iterations for spatial policy>
-  - examples: sh joint-pyscripts/run-mvc.sh mvc_test mvc_exp 100 1000
+  -- examples: sh joint-pyscripts/run-mvc.sh mvc_test mvc_exp 100 1000
+  - After successful completion, run-mvc script prints out the evaluation command. 
