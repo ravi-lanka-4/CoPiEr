@@ -22,8 +22,9 @@ scale=false
 startdiff=false
 startitr=false
 optSol=""
+nodecount=500
 
-while getopts ":hd:p:n:c:e:w:tx:m:r:l:u:i:j:k:f:a:b:s:q:w:o:" arg; do
+while getopts ":hd:p:n:c:e:w:tx:m:r:l:u:i:j:k:f:a:b:s:q:w:o:z:" arg; do
   case $arg in
     h)
       usage
@@ -118,6 +119,10 @@ while getopts ":hd:p:n:c:e:w:tx:m:r:l:u:i:j:k:f:a:b:s:q:w:o:" arg; do
         pru_norm=false
       fi
       echo "prune norm bool: $pru_norm"
+      ;;
+    z)
+      nodecount=${OPTARG}
+      echo "Node count: $nodecount"
       ;;
     b)
       if [ ${OPTARG} > 0 ]; then
@@ -327,6 +332,7 @@ for (( j=$low; j<$high; j=$j+$increment )); do
               #echo bin/scipdagger -r $freq -s scip_silent.set -f $prob --nodesel policy $prevSearchPolicy -n 10000 --np $numPasses \
               #                    --allsols_write $curPolicySol/$base/$i/ --sol $curPolicySol/$base.sol.$kk \
               #                    -k $sel_noise_iter --snorm "$cSelNormF" --probfeats "$probfeatsIter"
+              echo $cSelNormF
               bin/scipdagger -r $freq -s scip.set -f $prob --nodesel policy $prevSearchPolicy -n 10000 --np $numPasses \
                                   --allsols_write $curPolicySol/$base/$i/ --sol $curPolicySol/$base.sol.$kk \
                                   -k $sel_noise_iter --snorm "$cSelNormF" --probfeats "$probfeatsIter"
@@ -470,13 +476,14 @@ for (( j=$low; j<$high; j=$j+$increment )); do
           #                  -o $opt_sol -k $sel_noise_iter --np $((i-1)) \
           #                  --pnorm "$cPruNormF" --snorm "$cSelNormF"
 
-          echo bin/scipdagger -r $freq -s scip.set -f $prob -b 0.3 -n 200 \
+          echo bin/scipdagger -r $freq -s scip.set -f $prob -b 0.3 -n $nodecount\
                             --nodesel dagger $searchPolicy --nodeseltrj $searchTrjIter \
-                            -o $opt_sol --snorm "$cSelNormF" --probfeats "$probfeatsIter" | tee $tmpLog
+                            -o $opt_sol --snorm "$selNormFile" --probfeats "$probfeatsIter" | tee $tmpLog
 
-          bin/scipdagger -r $freq -s scip.set -f $prob -b 0.3 -n 500 \
+          echo $selNormFile
+          bin/scipdagger -r $freq -s scip.set -f $prob -b 0.3 -n $nodecount \
                             --nodesel dagger $searchPolicy --nodeseltrj $searchTrjIter \
-                            -o $opt_sol --snorm "$cSelNormF" --probfeats "$probfeatsIter" | tee $tmpLog
+                            -o $opt_sol --snorm "$selNormFile" --probfeats "$probfeatsIter" | tee $tmpLog
 
           if [ $scale = true ]; then 
             # Get Integrality gap 

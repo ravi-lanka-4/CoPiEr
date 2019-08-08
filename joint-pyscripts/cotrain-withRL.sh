@@ -112,6 +112,7 @@ train_scip(){
   local suffix=$4
   local ftype=$5
   local iter=$6
+  local ncount=$7
 
   local cexp="$experiment"_"$iter"
 
@@ -123,7 +124,7 @@ train_scip(){
 
        #-f $probfeats # Jialin: Uncomment this and add as an argument for problem specific features
 
-  scripts/train_bb_search.sh -d $cdata -p $n -n 1 -x $suffix -l 10 -u 11 -i 1 \
+  scripts/train_bb_search.sh -d $cdata -p $n -n 1 -x $suffix -l 10 -u 11 -i 1 -z $ncount \
        -e $cexp -b sel_only_norm.dat -o $COTRAIN_SCRATCH/$solDir/train/$experiment/ 
   cd -
 }
@@ -190,7 +191,7 @@ learn_bnb(){
   solDir=$COTRAIN_SCRATCH/$cdata_/$cexp/
 
   # Train SCIP
-  train_scip $data/$ftype/ $SCIP_ITR $cexp_pre $suffix $ftype $iter
+  train_scip $data/$ftype/ $SCIP_ITR $cexp_pre $suffix $ftype $iter $ncount
 
   # Generate performance on the unlabeled data
   echo -e "Running for current iteration unlabeled data"
@@ -403,7 +404,7 @@ fi
 if [ "$train" = true ]; then
 
   # Presettings for sub modules
-  SCIP_ITR=1 
+  SCIP_ITR=2
 
   lpexp=$experiment"_lp"
   gexp=$experiment"_gpickle"
